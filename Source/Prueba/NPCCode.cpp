@@ -11,10 +11,18 @@ ANPCCode::ANPCCode()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	//search for a the Datatable with the Dialogues
 	static ConstructorHelpers::FObjectFinder<UDataTable> NPCDialogue(TEXT("DataTable'/Game/ContenidoTFG/Dialogue5.Dialogue5'"));
+	//if the datatable is found, it saves it in a class variable
 	if (NPCDialogue.Succeeded()) {
 		NPCmyDataTable = NPCDialogue.Object;
 	}
+
+	//Create a context from the row
+	static const FString ContextString(TEXT("Dialogue Context"));
+
+	//Get a row from the datatable
+	FString* DialogueLine1 = NPCmyDataTable->FindRow<FString>(FName(TEXT("1")), ContextString, true);
 }
 
 // Called when the game starts or when spawned

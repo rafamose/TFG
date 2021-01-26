@@ -146,6 +146,7 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 		PhysicsHandle->SetTargetLocation(LineTraceEnd);
 	}
 
+
 	// ...
 }
 
