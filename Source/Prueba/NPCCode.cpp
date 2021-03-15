@@ -11,22 +11,6 @@ ANPCCode::ANPCCode()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	//search for a the Datatable with the Dialogues
-	
-	static ConstructorHelpers::FObjectFinder<UDataTable> NPCDialogue(TEXT("DataTable'/Game/MisCosa/DialogoNpc1.DialogoNpc1'"));
-	//if the datatable is found, it saves it in a class variable
-	
-	if (NPCDialogue.Succeeded()) {
-		NpcMyDataTable = NPCDialogue.Object;
-		UE_LOG(LogTemp, Warning, TEXT("Tengo la tabla, ahora que"));
-	}
-
-	//Create a context from the row
-
-
-	//Get a row from the datatable
-
-
 }
 
 // Called when the game starts or when spawned
@@ -35,21 +19,14 @@ void ANPCCode::BeginPlay()
 	Super::BeginPlay();
 	UE_LOG(LogTemp, Warning, TEXT("Pero funciona o no"));
 
-	static const FString ContextString(TEXT("Dialogue Context"));
+	static const FString ContextString(TEXT("Dialogue Context")); //String shown automaticaly in log errors
 
-	//NPCmyDataTable->GetRowStruct();
 
-	//TArray<FName> RowNames = NpcMyDataTable->GetRowNames();
-
-	//for (int i = 0; i < RowNames.Num(); i++) {
-		//UE_LOG(LogTemp, Warning, TEXT("Row: %s"), *RowNames[i].ToString());
-	//}
-
-	MyDialogue = NpcMyDataTable->FindRow<FNewNpcDialogue>(FName(TEXT("1")), ContextString, true);
+	MyDialogue = NpcMyDataTable->FindRow<FNewNpcDialogue>(FName(TEXT("1")), ContextString, true); //get row from datatable (first argument is the row number)
 	if (MyDialogue)
 	{
-		FString DialogueLine1 = MyDialogue->Dialogue;
-		UE_LOG(LogTemp, Warning, TEXT("Dialogo es este: %s"), *MyDialogue->Dialogue);
+		FString DialogueLine1 = MyDialogue->Dialogue; //get de dialogue text
+		UE_LOG(LogTemp, Warning, TEXT("Dialogo es este: %s"), *MyDialogue->Dialogue); //print dialogue text in a log
 	}
 	
 }
