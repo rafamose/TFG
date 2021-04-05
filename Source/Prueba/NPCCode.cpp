@@ -28,8 +28,11 @@ void ANPCCode::BeginPlay()
 		FString DialogueLine1 = MyDialogue->Dialogue; //get de dialogue text
 		UE_LOG(LogTemp, Warning, TEXT("Dialogo es este: %s"), *MyDialogue->Dialogue); //print dialogue text in a log
 	}
+
+
 	
 }
+
 
 // Called every frame
 void ANPCCode::Tick(float DeltaTime)
