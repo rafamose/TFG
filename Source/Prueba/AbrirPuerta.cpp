@@ -24,7 +24,7 @@ void UAbrirPuerta::BeginPlay()
 	Owner = GetOwner();
 
 	ActorThatOpens = GetWorld()->GetFirstPlayerController()->GetPawn();
-
+	actorRotation = Owner->GetActorRotation();
 	// ...
 	
 }
@@ -33,12 +33,12 @@ void UAbrirPuerta::OpenDoor()
 {
 	
 
-	Owner->SetActorRotation(FRotator(0.f, -90.f, 0.f));
+	Owner->SetActorRotation( actorRotation + FRotator(0.f, -90.f, 0.f));
 }
 
 void UAbrirPuerta::CloseDoor()
 {
-	Owner->SetActorRotation(FRotator(0.f, 0.f, 0.f));
+	Owner->SetActorRotation(actorRotation);
 }
 
 

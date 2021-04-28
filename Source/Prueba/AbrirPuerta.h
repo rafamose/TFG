@@ -43,7 +43,7 @@ public:
 	float LastDoorOpenTime;
 
 
-
+	FRotator actorRotation;
 	AActor* ActorThatOpens;
 	AActor* Owner;
 };
