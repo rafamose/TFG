@@ -28,7 +28,12 @@ void UWatcher::BeginPlay()
 	// ...
 	
 }
-
+void UWatcher::FadeOut()
+{
+	APlayerController * Controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+	class APlayerController * MyPC = Cast<APlayerController>(Controller);
+	MyPC->ClientSetCameraFade(true, FColor::Black, FVector2D(1.0, 0.0), 10.0);
+}
 
 // Called every frame
 void UWatcher::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -36,9 +41,7 @@ void UWatcher::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	if (WatcherTrigger->IsOverlappingActor(MyActor))
 	{
-		APlayerController * Controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
-		class APlayerController * MyPC = Cast<APlayerController>(Controller);
-		MyPC->ClientSetCameraFade(true, FColor::Black, FVector2D(1.0, 0.0), 10.0);
+		FadeOut();
 		MyActor->SetActorLocation(ActorPosition);
 	}
 
