@@ -27,12 +27,15 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ATriggerVolume* WatcherTrigger;
 
 	AActor* MyActor;
 	AActor* Owner;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVector ActorPosition;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool restart = true;
 };
