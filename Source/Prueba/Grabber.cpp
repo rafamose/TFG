@@ -33,7 +33,7 @@ void UGrabber::BeginPlay()
 	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
 	InputComponent = GetOwner()->FindComponentByClass<UInputComponent>();
 	if (InputComponent) {
-		UE_LOG(LogTemp, Warning, TEXT("Estamos perfestos con el input component"));
+		UE_LOG(LogTemp, Warning, TEXT("Estamos perfectos con el input component"));
 
 		InputComponent->BindAction("Agarrar", IE_Pressed, this, &UGrabber::Grab);
 		InputComponent->BindAction("Agarrar", IE_Released, this, &UGrabber::Released);
@@ -45,7 +45,7 @@ void UGrabber::BeginPlay()
 	}
 
 	if (PhysicsHandle) {
-		UE_LOG(LogTemp, Warning, TEXT("Estamos perfestos con el physics component"));
+		UE_LOG(LogTemp, Warning, TEXT("Estamos perfectos con el physics component"));
 	}
 	else
 	{

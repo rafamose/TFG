@@ -120,10 +120,10 @@ Identificación del problema real
 
 \begin_layout Standard
 Unreal Engine posee múltiples escenarios de pruebas pre-construidos en los
- cuales puedes interactuar con diversos elementos del motor gráfico y aprender
- de manera general cómo funcionan los mismos.
+ cuales puedes interactuar con diversos elementos del motor gráfico <referencia>
+ y aprender de manera general cómo funcionan los mismos.
  A su vez, existen incontables cursos y tutoriales de programación y uso
- de Unreal Engine.
+ de Unreal Engine.<referencia>
 \end_layout
 
 \begin_layout Standard
@@ -167,7 +167,7 @@ Un nivel de blueprints, el cual enseñará el método de programación propio
 \end_layout
 
 \begin_layout Itemize
-Un nivel de c++, el cual enseñará conceptos de código c++ específicos de
+Un nivel de c++, el cual enseñará conceptos de código C++ específicos de
  Unreal Engine
 \end_layout
 
@@ -182,7 +182,7 @@ El programa se podrá ejecutar desde cualquier dispositivo de Windows 7+.
 \end_layout
 
 \begin_layout Standard
-El programa tendrá una interfaz sencilla e intuitiva, a pesar de que está
+—El programa tendrá una interfaz sencilla e intuitiva, a pesar de que está
  dirigido a un público con conocimientos previos de programación
 \end_layout
 
@@ -202,7 +202,15 @@ Ciclo de mantenimiento
 \end_layout
 
 \begin_layout Standard
-El programa no necesitará de un mantenimiento periódico y solo se tratará
+(empezar por lo positivo 
+\begin_inset Quotes fld
+\end_inset
+
+se prestará a modificaciones y nuevos añadidos si así se viese necesario
+\begin_inset Quotes frd
+\end_inset
+
+) El programa no necesitará de un mantenimiento periódico y solo se tratará
  en el caso de que éste contenga errores que sean descubiertos posteriormente.
  Aun así, se prestará a modificaciones y nuevos añadidos si así se viese
  necesario
@@ -286,6 +294,10 @@ Objetivos
 
 \begin_layout Subsection
 Objetivo principal
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Subsection
@@ -391,11 +403,11 @@ Lo siguiente será la descripción de un trigger, que será el concepto más
 \begin_layout Standard
 En esta segunda habitación habrá un claro ejemplo práctico de disparador
  o 
-\begin_inset Quotes eld
+\begin_inset Quotes fld
 \end_inset
 
 trigger
-\begin_inset Quotes erd
+\begin_inset Quotes frd
 \end_inset
 
 .
