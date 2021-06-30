@@ -28,7 +28,7 @@
 \output_sync 0
 \bibtex_command biber
 \index_command default
-\paperfontsize default
+\paperfontsize 12
 \spacing single
 \use_hyperref false
 \papersize default
@@ -288,6 +288,10 @@ Pruebas
 Seguridad
 \end_layout
 
+\begin_layout Standard
+Preguntar estos dos apartados
+\end_layout
+
 \begin_layout Section
 Objetivos
 \end_layout
@@ -297,7 +301,8 @@ Objetivo principal
 \end_layout
 
 \begin_layout Standard
-
+El principal objetivo de este projecto será poder mostrar a nuevos usuarios
+ del motor gráfico Unreal Engine diferentes características propias de éste.
 \end_layout
 
 \begin_layout Subsection
@@ -308,6 +313,26 @@ Objetivos específicos
 Objetivos formales
 \end_layout
 
+\begin_layout Standard
+Los objetivos formales del proyecto son los siguientes:
+\end_layout
+
+\begin_layout Itemize
+Aprender a usar el motor gráfico Unreal Engine
+\end_layout
+
+\begin_layout Itemize
+Aprender a programar en el entorno gráfico de Visual Studio
+\end_layout
+
+\begin_layout Itemize
+Aprender distintos conceptos de programación en el ámbito de los videojuegos
+\end_layout
+
+\begin_layout Itemize
+Aplicar los conocimientos aprendidos en el Grado en un proyecto completo
+\end_layout
+
 \begin_layout Section
 Antecedentes
 \end_layout
@@ -316,28 +341,151 @@ Antecedentes
 Restricciones
 \end_layout
 
+\begin_layout Standard
+Este apartado presentará las limitaciones o restricciones que se presentarán
+ a lo largo del desarrollo del tipo del proyecto.
+ Se dividirán en dos tipos: los factores dato son aquellos inherentes al
+ propio problema, mientras que los factores estratégicos los forman decisiones
+ realizadas a partir del diseño del mismo.
+\end_layout
+
 \begin_layout Subsection
 Factores Dato
+\end_layout
+
+\begin_layout Standard
+Estas son los distintos factores dato, inherentes al proyecto:
+\end_layout
+
+\begin_layout Itemize
+El código del proyecto estará escrito en C++, ya que es el lenguaje de programac
+ión que soporta el motor gráfico Unreal Engine.
+\end_layout
+
+\begin_layout Itemize
+Se usará, en su mayoría, recursos del propio motor gráfico y otros proporcionado
+s por la propia tienda de la plataforma Epic Games, siendo éstos recursos
+ de software libre y, al menos los que usaremos, disponibles de forma gratuíta
+\end_layout
+
+\begin_layout Itemize
+El software usado en todo momento es totalmente gratuíto, tanto el entorno
+ de programación Visual Studio como el propio motor gráfico Unreal Engine
 \end_layout
 
 \begin_layout Subsection
 Factores estratégicos
 \end_layout
 
+\begin_layout Standard
+Los siguientes puntos son las decisiones tomadas a lo largo del desarrollo
+ del proyecto:
+\end_layout
+
+\begin_layout Itemize
+El proyecto estará programado en el motor gráfico Unreal Engine, concretamente
+ en la versión 4.24.
+ Ésta era la última versión que existía cuando se comenzó el proyecto y,
+ para evitar problemas de compatibilidad, no se ha trasladado a las siguientes
+ versiones.
+\end_layout
+
+\begin_layout Itemize
+Se programará el código en el entorno de programación Visual Studio.
+ Esto es debido a que tiene integración directa con el motor y permite opciones
+ como la compilación directa desde Visual Studio o la depuración de código.
+\end_layout
+
+\begin_layout Itemize
+Se usará también la programación por blueprints, qué es el metodo de programació
+n visual proporcionado por Unreal Engine, basado en un sistema de nodos
+ y conexiones.
+\end_layout
+
+\begin_layout Itemize
+Las imágenes usadas estarán en formato PNG, para así poder trabajar con
+ transparencias, con una alta calidad y una compresión sin pérdida
+\end_layout
+
 \begin_layout Section
 Recursos
+\end_layout
+
+\begin_layout Standard
+Este apartado servirá para listar los recursos usados en el desarrollo del
+ proyecto, divididos en recursos hardware, recursos software y recursos
+ humanos
 \end_layout
 
 \begin_layout Subsection
 Recursos Hardware
 \end_layout
 
+\begin_layout Standard
+Se ha usado un ordenador personal con las siguientes especificaciones:
+\end_layout
+
+\begin_layout Itemize
+Procesador Intel Core 15-7400 @ 3.00 GHz
+\end_layout
+
+\begin_layout Itemize
+16GB de memoria RAM
+\end_layout
+
+\begin_layout Itemize
+Unidad HDD de 1TB de capacidad
+\end_layout
+
+\begin_layout Itemize
+Unidad SDD de 240GB de capacidad
+\end_layout
+
 \begin_layout Subsection
 Recursos Software
 \end_layout
 
+\begin_layout Standard
+Estos son los recursos Software usados para el desarrollo del proyecto:
+\end_layout
+
+\begin_layout Itemize
+Sistema operativo Windows 10 Home
+\end_layout
+
+\begin_layout Itemize
+Motor gráfico Unreal Engine, en su versión 4.24
+\end_layout
+
+\begin_layout Itemize
+Entorno de programación Visual Studio
+\end_layout
+
+\begin_layout Itemize
+El procesador de documentos LyX, que permite la creación y edición de documentos
+ en LaTeX
+\end_layout
+
+\begin_layout Itemize
+Clip Studio para el diseño de imágenes
+\end_layout
+
 \begin_layout Subsection
 Recursos humanos
+\end_layout
+
+\begin_layout Standard
+A continuación se detallará el personal dedicado al desarrollo del proyecto
+\end_layout
+
+\begin_layout Itemize
+El autor, Rafael Moreno Serrano, estudianto de cuarto curso del Grado en
+ Ingeniería Informática de la Escuela Politécnica Superior de la Universidad
+ de Córdoba
+\end_layout
+
+\begin_layout Itemize
+Los directores encargados de la coordinación del proyecto:
 \end_layout
 
 \begin_layout Part

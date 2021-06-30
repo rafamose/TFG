@@ -1,0 +1,272 @@
+%% LyX 2.3.6.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[spanish]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{luainputenc}
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{biblatex-examples.bib}
+\begin{document}
+\title{Implementación de un tutorial interactivo de programación con Unreal
+Engine en forma de videojuego puzle en primera persona.}
+\author{Rafael Moreno Serrano}
+
+\maketitle
+\tableofcontents{}
+
+\part{Introducción}
+
+\section{Introducción}
+
+\section{Definición del problema}
+
+A continuación se mostrará la definición del problema desde diferentes
+puntos de vista:
+
+\subsection{Identificación del problema real}
+
+Unreal Engine posee múltiples escenarios de pruebas pre-construidos
+en los cuales puedes interactuar con diversos elementos del motor
+gráfico <referencia> y aprender de manera general cómo funcionan los
+mismos. A su vez, existen incontables cursos y tutoriales de programación
+y uso de Unreal Engine.<referencia>
+
+Este proyecto tiene como objetivo un concepto intermedio. Poder enseñar
+conceptos de programación y de uso del motor al usuario de forma interactiva,
+a la vez que, para avanzar, debes poner a prueba los conceptos aprendidos.
+Ésto puede ser una manera de introducción a Unreal Engine para programadores
+que aún no hayan usado el programa y quieran aprender de una manera
+más entretenida y, a su vez, una manera en la examine si se ha entendido
+correctamente aquello que se acaba de explicar.
+
+\subsection{Identificación del problema técnico}
+
+La definición del problema técnico se realizará mediante la técnica
+Product Design Specification (PDS), la cual está formada por los siguientes
+apartados:
+
+\subsubsection{Funcionamiento}
+
+El programa ofrecerá al usuario, el cual ya posee conocimientos de
+programación, un tutorial interactivo de conceptos útiles en unreal
+engine. Dicho tutorial se compondrá de 3 niveles:
+\begin{itemize}
+\item Un nivel físico, el cual explicará los principales estados que puede
+tener cada uno de los actores que se encuentran en un proyecto de
+Unreal Engine
+\item Un nivel de blueprints, el cual enseñará el método de programación
+propio de Unreal Engine
+\item Un nivel de c++, el cual enseñará conceptos de código C++ específicos
+de Unreal Engine
+\end{itemize}
+
+\subsubsection{Entorno}
+
+El programa se podrá ejecutar desde cualquier dispositivo de Windows
+7+. Aunque el entorno óptimo de ejecución del programa será en la
+versión de Windows 10.
+
+---El programa tendrá una interfaz sencilla e intuitiva, a pesar
+de que está dirigido a un público con conocimientos previos de programación
+
+\subsubsection{Vida esperada}
+
+Se trata de un programa que enseña conceptos básicos de Unreal Engine
+en la versión 4.20., pero al no adentrarse en temas específicos, es
+posible que siga siendo útil en las versiones venideras. Es por ello
+que realmente la vida esperada del producto es incierta
+
+\subsubsection{Ciclo de mantenimiento}
+
+(empezar por lo positivo <<se prestará a modificaciones y nuevos
+añadidos si así se viese necesario>>) El programa no necesitará de
+un mantenimiento periódico y solo se tratará en el caso de que éste
+contenga errores que sean descubiertos posteriormente. Aun así, se
+prestará a modificaciones y nuevos añadidos si así se viese necesario
+
+\subsubsection{Competencia}
+
+La llamada <<Marketplace>> de Unreal Engine propone una serie de
+muestras del motor, siento algunas de ellas interactivas, pero éstas
+no ponen a prueba al usuario. Es por ello que no tendría ningún competidor
+directo, aunque sí tendría bastantes competidores de una forma menos
+inmediata
+
+\subsubsection{Aspecto externo}
+
+El programa tendrá el aspecto de un videojuego al uso, controlándose
+mediante teclado o <<controller>>
+
+\subsubsection{Estandarización}
+
+\subsubsection{Calidad y fiabilidad}
+
+Se asegurará de que el programa funcione correctamente y sea robusto
+mediante un profundo testeo de las opciones que ofrece.
+
+Al ser un entorno 3D es puede dar pie a pequeños errores físicos,
+por lo que será necesario comprobar cualquier situación y pulir lo
+que fuera necesario. En cambio, al ser una prueba lineal, el abanico
+de errores es bastante más pequeño del que podría ser si se otorgase
+algún grado más de libertad
+
+\subsubsection{Programación de tareas}
+
+Estas son las tareas que se llevarán acabo para la realización de
+este proyecto
+
+\subsubsection{Pruebas}
+
+\subsubsection{Seguridad}
+
+\section{Objetivos}
+
+\subsection{Objetivo principal}
+
+El principal objetivo de este projecto será poder mostrar a nuevos
+usuarios del motor gráfico Unreal Engine diferentes características
+propias de éste.
+
+\subsection{Objetivos específicos}
+
+\subsection{Objetivos formales}
+
+Los objetivos formales del proyecto son los siguientes:
+\begin{itemize}
+\item Aprender a usar el motor gráfico Unreal Engine
+\item Aprender a programar en el entorno gráfico de Visual Studio
+\item Aprender distintos conceptos de programación en el ámbito de los videojuegos
+\item Aplicar los conocimientos aprendidos en el Grado en un proyecto completo
+\end{itemize}
+
+\section{Antecedentes}
+
+\section{Restricciones}
+
+Este apartado presentará las limitaciones o restricciones que se presentarán
+a lo largo del desarrollo del tipo del proyecto. Se dividirán en dos
+tipos: los factores dato son aquellos inherentes al propio problema,
+mientras que los factores estratégicos los forman decisiones realizadas
+a partir del diseño del mismo.
+
+\subsection{Factores Dato}
+
+\subsection{Factores estratégicos}
+
+Los siguientes puntos son las decisiones tomadas a lo largo del desarrollo
+del proyecto:
+\begin{itemize}
+\item El proyecto estará programado en el motor gráfico Unreal Engine, concretamente
+en la versión 4.24. Ésta era la última versión que existía cuando
+se comenzó el proyecto y, para evitar problemas de compatibilidad,
+no se ha trasladado a las siguientes versiones.
+\item El código del mismo estará escrito en C++, ya que es el lenguaje de
+programación que soporta Unreal Engine
+\item Se programará el código en el entorno de programación Visual Studio.
+Esto es debido a que tiene integración directa con el motor y permite
+opciones como la compilación directa desde Visual Studio o la depuración
+de código.
+\item Se usará también la programación por blueprints, qué es el metodo
+de programación visual proporcionado por Unreal Engine, basado en
+un sistema de nodos y conexiones.
+\item Las imágenes usadas estarán en formato PNG, para así poder trabajar
+con transparencias, con una alta calidad y una compresión sin pérdida
+\end{itemize}
+
+\section{Recursos}
+
+Este apartado servirá para listar los recursos usados en el desarrollo
+del proyecto, divididos en recursos hardware, recursos software y
+recursos humanos
+
+\subsection{Recursos Hardware}
+
+Se ha usado un ordenador personal con las siguientes especificaciones:
+\begin{itemize}
+\item Procesador Intel Core 15-7400 @ 3.00 GHz
+\item 16GB de memoria RAM
+\item Unidad HDD de 1TB de capacidad
+\item Unidad SDD de 240GB de capacidad
+\end{itemize}
+
+\subsection{Recursos Software}
+
+Estos son los recursos Software usados para el desarrollo del proyecto:
+\begin{itemize}
+\item Sistema operativo Windows 10 Home
+\item Motor gráfico Unreal Engine, en su versión 4.24
+\item Entorno de programación Visual Studio
+\item El procesador de documentos LyX, que permite la creación y edición
+de documentos en LaTeX
+\item Clip Studio para el diseño de imágenes
+\end{itemize}
+
+\subsection{Recursos humanos}
+
+A continuación se detallará el personal dedicado al desarrollo del
+proyecto
+\begin{itemize}
+\item El autor, Rafael Moreno Serrano, estudianto de cuarto curso del Grado
+en Ingeniería Informática de la Escuela Politécnica Superior de la
+Universidad de Córdoba
+\item Los directores encargados de la coordinación del proyecto:
+\end{itemize}
+
+\part{ANALISIS Y ESPECIFICACIÓN DE REQUISITOS}
+
+\section{Análisis y especificación de requisitos}
+
+\subsection{Requisitos de información}
+
+\subsection{Requisitos funcionales}
+
+\subsection{Requisitos no funcionales}
+
+\part{MODELADO DE REQUISITOS}
+
+\section{Analisis funcional}
+
+En este nivel se explicarán los conceptos básicos del plano físico
+del editor de Unreal Engine. Se hablará de colisión, transparencia,
+disparadores, texturas... El nivel se dividirá en 2 habitaciones.
+Ambas habitaciones tienen un estilo rústico, con unos cuantos muebles
+decorativos y unos elementos a tratar que serán claramente diferenciables
+del resto, para captar la atención del usuario:
+
+Nada más comenzar el nivel se enseñará al usuario unos cuantos conceptos
+de Unreal Engine por pantalla. Entre ellos los tres tipos de físicas
+que puede tener un actor que son los siguiente: sólido, transparente
+o disparador. Para mostrarlo, delante del punto de aparición habrá
+dos cubos contiguos, uno será atravesable y el otro no. Además tendrán
+texturas a una escala diferente para explicar el escalado de textura.
+Justo en frente de cada cubo habrá un botón. Al pulsar el botón explicará
+el estado respectivo del cubo que se encuentre delante.
+
+Lo siguiente será la descripción de un trigger, que será el concepto
+más importante de esta parte. Para ello, en una esquina la cual se
+indicará de forma llamativa, habrá otro botón explicativo. Éste tratará
+la explicación de cómo seleccionar mediante código un 
+
+En esta segunda habitación habrá un claro ejemplo práctico de disparador
+o <<trigger>>. Éste será la figura del vigilante. En un principio,
+el acompañante avisa al usuario de la dificultad de pasar hacia el
+otro lado, y tras un intento, el rango de visión se hará visible.
+Una vez hecho, se dará la posibilidad de modificar el tamaño del campo
+de visión para mostrar visualmente la aplicación de este y poder pasar
+a la siguiente fase
+
+Este nivel comenzará en una sala con diversas pizarras mostrando partes
+de código blueprint. La finalidad principal de esta zona será la de
+demostrar que los blueprints es otro tipo de programación y, aunque
+sea más gráfica, sigue siendo necesario tener conceptos claros de
+programación. La principal ventaja es la de la claridad visual de
+los eventos y la posibilidad de ver el orden de acción de los mismos.
+
+La parte interactiva
+
+\printbibliography
+
+
+\end{document}
