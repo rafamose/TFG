@@ -4,7 +4,10 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass book
+\begin_preamble
+\usepackage{palatino}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish
@@ -28,7 +31,7 @@
 \output_sync 0
 \bibtex_command biber
 \index_command default
-\paperfontsize default
+\paperfontsize 12
 \spacing single
 \use_hyperref false
 \papersize default
@@ -288,6 +291,10 @@ Pruebas
 Seguridad
 \end_layout
 
+\begin_layout Standard
+Preguntar estos dos apartados
+\end_layout
+
 \begin_layout Section
 Objetivos
 \end_layout
@@ -349,6 +356,26 @@ Este apartado presentará las limitaciones o restricciones que se presentarán
 Factores Dato
 \end_layout
 
+\begin_layout Standard
+Estas son los distintos factores dato, inherentes al proyecto:
+\end_layout
+
+\begin_layout Itemize
+El código del proyecto estará escrito en C++, ya que es el lenguaje de programac
+ión que soporta el motor gráfico Unreal Engine.
+\end_layout
+
+\begin_layout Itemize
+Se usará, en su mayoría, recursos del propio motor gráfico y otros proporcionado
+s por la propia tienda de la plataforma Epic Games, siendo éstos recursos
+ de software libre y, al menos los que usaremos, disponibles de forma gratuíta
+\end_layout
+
+\begin_layout Itemize
+El software usado en todo momento es totalmente gratuíto, tanto el entorno
+ de programación Visual Studio como el propio motor gráfico Unreal Engine
+\end_layout
+
 \begin_layout Subsection
 Factores estratégicos
 \end_layout
@@ -364,11 +391,6 @@ El proyecto estará programado en el motor gráfico Unreal Engine, concretamente
  Ésta era la última versión que existía cuando se comenzó el proyecto y,
  para evitar problemas de compatibilidad, no se ha trasladado a las siguientes
  versiones.
-\end_layout
-
-\begin_layout Itemize
-El código del mismo estará escrito en C++, ya que es el lenguaje de programación
- que soporta Unreal Engine
 \end_layout
 
 \begin_layout Itemize

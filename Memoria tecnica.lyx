@@ -4,7 +4,10 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass book
+\begin_preamble
+\usepackage{palatino}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish
@@ -101,11 +104,11 @@ LatexCommand tableofcontents
 Introducción
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Introducción
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Definición del problema
 \end_layout
 
@@ -114,7 +117,7 @@ A continuación se mostrará la definición del problema desde diferentes puntos
  de vista:
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Identificación del problema real
 \end_layout
 
@@ -137,7 +140,7 @@ Este proyecto tiene como objetivo un concepto intermedio.
 nte aquello que se acaba de explicar.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Identificación del problema técnico
 \end_layout
 
@@ -146,7 +149,7 @@ La definición del problema técnico se realizará mediante la técnica Product
  Design Specification (PDS), la cual está formada por los siguientes apartados:
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Funcionamiento
 \end_layout
 
@@ -171,7 +174,7 @@ Un nivel de c++, el cual enseñará conceptos de código C++ específicos de
  Unreal Engine
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Entorno
 \end_layout
 
@@ -186,7 +189,7 @@ El programa se podrá ejecutar desde cualquier dispositivo de Windows 7+.
  dirigido a un público con conocimientos previos de programación
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Vida esperada
 \end_layout
 
@@ -197,7 +200,7 @@ Se trata de un programa que enseña conceptos básicos de Unreal Engine en
  Es por ello que realmente la vida esperada del producto es incierta
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Ciclo de mantenimiento
 \end_layout
 
@@ -216,7 +219,7 @@ se prestará a modificaciones y nuevos añadidos si así se viese necesario
  necesario
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Competencia
 \end_layout
 
@@ -235,7 +238,7 @@ Marketplace
  bastantes competidores de una forma menos inmediata
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Aspecto externo
 \end_layout
 
@@ -252,11 +255,11 @@ controller
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Estandarización
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Calidad y fiabilidad
 \end_layout
 
@@ -272,7 +275,7 @@ Al ser un entorno 3D es puede dar pie a pequeños errores físicos, por lo
  más pequeño del que podría ser si se otorgase algún grado más de libertad
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Programación de tareas
 \end_layout
 
@@ -280,11 +283,11 @@ Programación de tareas
 Estas son las tareas que se llevarán acabo para la realización de este proyecto
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Pruebas
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Seguridad
 \end_layout
 
@@ -292,11 +295,11 @@ Seguridad
 Preguntar estos dos apartados
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Objetivos
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Objetivo principal
 \end_layout
 
@@ -305,11 +308,11 @@ El principal objetivo de este projecto será poder mostrar a nuevos usuarios
  del motor gráfico Unreal Engine diferentes características propias de éste.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Objetivos específicos
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Objetivos formales
 \end_layout
 
@@ -333,11 +336,11 @@ Aprender distintos conceptos de programación en el ámbito de los videojuegos
 Aplicar los conocimientos aprendidos en el Grado en un proyecto completo
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Antecedentes
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Restricciones
 \end_layout
 
@@ -349,7 +352,7 @@ Este apartado presentará las limitaciones o restricciones que se presentarán
  realizadas a partir del diseño del mismo.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Factores Dato
 \end_layout
 
@@ -373,7 +376,7 @@ El software usado en todo momento es totalmente gratuíto, tanto el entorno
  de programación Visual Studio como el propio motor gráfico Unreal Engine
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Factores estratégicos
 \end_layout
 
@@ -407,7 +410,7 @@ Las imágenes usadas estarán en formato PNG, para así poder trabajar con
  transparencias, con una alta calidad y una compresión sin pérdida
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Recursos
 \end_layout
 
@@ -417,7 +420,7 @@ Este apartado servirá para listar los recursos usados en el desarrollo del
  humanos
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Recursos Hardware
 \end_layout
 
@@ -441,7 +444,7 @@ Unidad HDD de 1TB de capacidad
 Unidad SDD de 240GB de capacidad
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Recursos Software
 \end_layout
 
@@ -470,7 +473,7 @@ El procesador de documentos LyX, que permite la creación y edición de document
 Clip Studio para el diseño de imágenes
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Recursos humanos
 \end_layout
 
@@ -492,19 +495,19 @@ Los directores encargados de la coordinación del proyecto:
 ANALISIS Y ESPECIFICACIÓN DE REQUISITOS
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Análisis y especificación de requisitos
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Chapter
 Requisitos de información
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Chapter
 Requisitos funcionales
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Chapter
 Requisitos no funcionales
 \end_layout
 
@@ -512,7 +515,7 @@ Requisitos no funcionales
 MODELADO DE REQUISITOS
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Analisis funcional
 \end_layout
 
