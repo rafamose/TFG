@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "MySaveGame.h"
 #include "MyCharacter.generated.h"
 
 UCLASS()
@@ -14,6 +15,12 @@ class PRUEBA_API AMyCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AMyCharacter();
+
+private:
+
+	void SaveGame();
+
+	void LoadGame();
 
 protected:
 	// Called when the game starts or when spawned

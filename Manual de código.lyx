@@ -1,0 +1,199 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage{palatino}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plain
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Implementación de un tutorial interactivo de programación con Unreal Engine
+ en forma de videojuego puzle en primera persona.
+\end_layout
+
+\begin_layout Author
+Rafael Moreno Serrano
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Introducción
+\end_layout
+
+\begin_layout Chapter
+Introducción
+\end_layout
+
+\begin_layout Standard
+En este documento se mostrará todo el código diseñado y realizado para el
+ proyecto.
+\end_layout
+
+\begin_layout Standard
+El código principal está realizado en el lenguaje C++, y tiene las característic
+as y funciones propias del motor gráfico Unreal Engine, ya que en todo momento
+ se codifica en base a éste.
+ Así mismo, se mostrará los Blueprints creados, al ser un lenguaje de script
+ como tal, y se tratará de la misma manera.
+\end_layout
+
+\begin_layout Standard
+Así, este documento se divide en las funciones creadas con C++ y con Blueprints,
+ siendo a su vez separadas por clases y/o documentos.
+\end_layout
+
+\begin_layout Section
+Ficheros
+\end_layout
+
+\begin_layout Chapter
+Código C++
+\end_layout
+
+\begin_layout Standard
+A continuación mostrará cada una de las clases codificadas en lenguaje C++:
+\end_layout
+
+\begin_layout Section
+Clase 
+\emph on
+AbrirPuerta
+\end_layout
+
+\begin_layout Standard
+Esta clase es creada para poder abrir una clase por medio de un 
+\emph on
+trigger
+\emph default
+ de superposición, y que ésta se cierre al cabo de un tiempo.
+\end_layout
+
+\begin_layout Subsection
+Función 
+\emph on
+BeginPlay
+\end_layout
+
+\begin_layout Standard
+Esta función se activa al comienzo, y guarda en variables el actor que tendrá
+ la capacidad de abrir la puerta (en este caso el jugador), y la rotación
+ inicial de la puerta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas/beginPlay abrirPuerta.PNG
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Función 
+\emph on
+TickComponent
+\end_layout
+
+\begin_layout Standard
+Esta función comprueba en cada tick si el actor está activando el trigger.
+ En caso positivo la puerta se abre y se guarda el momento en el que se
+ ha abierto.
+ Una vez pasado un tiempo, la puerta se cerrará.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas/tickcomponent abrirPuerta.PNG
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
