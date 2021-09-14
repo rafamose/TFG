@@ -292,11 +292,8 @@ Seguridad
 \end_layout
 
 \begin_layout Standard
-(poner que no se ha contemplado tener ningún tipo de seguridad)
-\end_layout
-
-\begin_layout Standard
-Preguntar estos dos apartados
+No se ha contemplado ningún tipo de sistema de seguridad, al no haber datos
+ personales con los que tratar.
 \end_layout
 
 \begin_layout Chapter
@@ -503,16 +500,36 @@ ANALISIS Y ESPECIFICACIÓN DE REQUISITOS
 Análisis y especificación de requisitos
 \end_layout
 
-\begin_layout Chapter
+\begin_layout Standard
+Para que el proyecto realice correctamente su funcionamiento necesita cubrir
+ unos requisitos que especificaremos a continuación.
+\end_layout
+
+\begin_layout Standard
+Hay tres tipos de requisitos, que serán: requisitos de información, requisitos
+ funcionales y requisitos no funcionales.
+\end_layout
+
+\begin_layout Section
 Requisitos de información
 \end_layout
 
-\begin_layout Chapter
+\begin_layout Section
 Requisitos funcionales
 \end_layout
 
-\begin_layout Chapter
+\begin_layout Standard
+Los requisitos funcionales determinan la función del proyecto.
+ Éstos tienen que estar definidos detalladamente, pero sin adentrarse en
+ exceso, ya que será un tema que se abarcará de manera más amplia más adelante
+\end_layout
+
+\begin_layout Section
 Requisitos no funcionales
+\end_layout
+
+\begin_layout Standard
+En este apartado se trataran los requisitos que no describen una funcionalidad
 \end_layout
 
 \begin_layout Part

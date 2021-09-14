@@ -602,7 +602,172 @@ d de ver el orden de acción de los mismos.
 \end_layout
 
 \begin_layout Standard
-La parte interactiva
+A continuación, se exponen los antecedentes a este proyecto, empezando de
+ manera más general para luego ir acotando a antecedentes más específicos
+ y similares al proyecto.
+\end_layout
+
+\begin_layout Standard
+Origen de los videojuegos La considerada primera “máquina de juegos” es
+ “NIMATRON”[2], una máquina electromecánica para jugar al juego matemático
+ Nim.
+ Fue mostrada en la feria mundial de Nueva York en 1940 por el Dr.
+ Edward Uhler Condon.
+ Jugaron unas 50.000 personas en los 6 meses que estuvo exponiéndose[3].
+ La primera videoconsola tenía el nombre de “Magnavox Odyssey”.
+ Anteriormente llamada “Brown Box”, fue lanzada como prototipo en 1967,
+ y permitía controlar cubos que se movían por la pantalla.
+ Se podían programar juegos como el ping pong.
+ Meses más tarde Atari lanzó la suya y fue la encargada de expandir la idea
+ al mercado, debido a su gran éxito.
+ Se lanzó el primer videojuego electrónico, el conocido “Pong”.
+ Los primeros videojuegos 3D en primera persona fueron “Maze War”, diseñado
+ por Steve Celley, y “Spasim”, lanzado por Jim Bowery, ambos en 1974.
+ Ambos permitían hasta 32 jugadores simultáneos.
+ El primero fue desarrollado para la Imlac PDS-1 y posteriormente portado
+ a Mac, Next, PalmOS y Xerox.
+ El segundo se lanzó para el sistema educativo en red de la Universidad
+ de Illinois (PLATO).
+ El género no adquirió popularidad hasta “Wolfenstein 3D” (1992), y un año
+ más tarde “Doom”, ambos creados por id Software y lanzados para PC [1].
+ El género se fue expandiendo a más especialidades además de disparos, siendo
+ algunos ejemplos “MYST” (1991) como videojuego de puzle o “The Elder Scrolls:
+ Arena” (1994) como videojuego de aventura rol.
+ Este proyecto será de tipo puzle, el cual alcanzó una fama enorme con el
+ lanzamiento de “Portal“ (2007) que popularizó el género de puzle moderno,
+ permitiendo una gran libertad e inmersión, como se puede observar, por
+ ejemplo, en “Antichamber” (2013).
+\end_layout
+
+\begin_layout Standard
+Historia de Unreal Engine Originalmente, no existían los motores de videojuegos.
+ Estos eran desarrollados como una única entidad, es decir, no había separación
+ entre la parte lógica y la gráfica, así que las rutinas de dibujado debían
+ ser implementadas desde cero.
+ No fue hasta la década de los noventa cuando se comenzó a hablar del término
+ “game engine”[4].
+ “Doom” y “Quake” fueron dos videojuegos que alcanzaron una gran popularidad
+ debido a que, en lugar de crear un videojuego desde cero, se licenciaba
+ la parte esencial del mismo para usarlo como base y crear motores de juego
+ 3D llamados “id Tech 1” y “Quake Engine”, respectivamente.
+ También se crearon motores en dos dimensiones como el famoso “RPG Tsukūru
+ Dante 98” en 1992, el cual sigue siendo actualizado a día de hoy bajo el
+ nombre de “RPG Maker”[6].
+ En 1998, el estudio de videojuegos “Epic MegaGames” (actual “Epic Games”)
+ lanza el videojuego “Unreal”, el cual presentó un nuevo motor gráfico con
+ el mismo nombre.
+ Este motor adquirió tanto éxito que ganó por mucho en popularidad a “id
+ Tech 4”, el que era hasta ese momento el motor más conocido.
+ Esa versión fue denominada como “Unreal Engine 1”, y entre sus características
+ estaba la detección de colisión o el editor de niveles[7].
+ Se crearon videojuegos de éxito como “X-COM: Enforcer” o el ya nombrado
+ “Unreal”.
+ La segunda versión se lanzó en 2002, e hizo su debut con “America’s Army”,
+ un shooter desarrollado con la intención de servir como prueba de reclutamiento
+ para la armada estadounidense.
+ Esta versión es capaz de crear niveles mucho más detallados y tenía un
+ sistema de animación de esqueleto y físicas mejoradas.
+ “Bioshock 1” o “Lineage II” usaban este motor.
+ En 2004 se publicó Unreal Engine 3, siendo utilizado por primera vez por
+ el videojuego “Gears of War”.
+ A pesar de que en lo visible para el jugador era todo drásticamente nuevo
+ y con más potencial, el aspecto técnico no cambió mucho, excepto que el
+ sistema de sombreado era totalmente programable.
+ Soportaba una gran cantidad de plataformas como Windows, Playstation 3,
+ Xbox 360, Android o iOS.
+ “Borderlands”, “Mass Effect” o “Rocket League” usan este motor.
+ Hubo que esperar hasta 2012 para que se publicase la actual versión, “Unreal
+ Engine 4”.
+ Fue un cambio muy importante, ya que un par de años después de su lanzamiento,
+ fue lanzado gratuitamente para todo el mundo, incluyendo todo el código
+ fuente escrito en C++.
+ Ésta versión es de libre uso con un 5% de royalties para publicadores y
+ 100% libre de royalties para proyectos gratuitos o privados.
+ La propia empresa Epic, lanzó el mundialmente conocido “Fortnite” como
+ demostración del potencial que tenía el motor en videojuegos multijugador.
+\end_layout
+
+\begin_layout Standard
+Unreal Engine El motor que se va a usar se define a sí mismo como la plataforma
+ más abierta y completa de creación de proyectos en 3D a tiempo real [8].
+ Actualmente se encuentra en la versión 4.24.3., con una versión 4.25.
+ ya en camino, y está en constante evolución con una excelente comunicación
+ y transparencia con el usuario.
+ El motor consiste en una interfaz gráfica de total modificación para adaptarse
+ a las necesidades personales.
+ Tiene integradas herramientas de todo tipo para mayor rapidez y simpleza,
+ entre ellas herramientas de animación, de modelaje, sonido, iluminación,
+ cinemática, y muchas más.
+ Con respecto a la renderización, es un proceso que se realiza en segundo
+ plano y da la oportunidad de seguir trabajando mientras tanto.
+ El programa tiene una perfecta integración con Visual Studio, lo cual da
+ la oportunidad de modificar el código del proyecto con facilidad y rapidez,
+ y permite la compilación en tiempo real para ver los resultados al instante
+ Uno de los conceptos interesantes que se tratará es el de la colisión de
+ objetos.
+ En Unreal Engine se divide en tres tipos: block, overlap e ignore.
+ El primero de ellos no permite al objeto A traspasar el objeto B, mientras
+ los otros dos sí.
+ La diferencia entre overlap e ignore es que cuando el objeto A realiza
+ un overlap sobre el objeto B, permite realizar la acción que se programe.
+ Unreal Engine tiene dos modos de programación.
+ La programación por código con Visual Studio, y los llamados blueprints.
+ Son modos totalmente integrados entre sí, siendo el uso de ambos la manera
+ más recomendada de realizar un proyecto.
+ Con los blueprints te permite conectar o modificar de manera más intuitiva
+ funciones, variables, objetos...
+ Desde 2014, Unreal Engine tiene una tienda íntegra o “marketplace” para
+ adquirir recursos de pago hechos por la comunidad, empresas externas o
+ la propia Epic Games [figura 1].
+ Cada mes ofrecen los llamados “Free of the Month”, recursos que anteriormente
+ eran de pago y los ofrecen temporalmente sin ningún coste adicional.
+ Entre estos recursos podemos encontrar: música, interfaces, modelos de
+ personajes o escenario, animaciones, sonidos, inteligencia artificial y
+ más.
+\end_layout
+
+\begin_layout Standard
+Figura 1.
+ Marketplace de Unreal Engine
+\end_layout
+
+\begin_layout Standard
+Proyectos similares Dreams Si hablamos de tutoriales interactivos sobre
+ desarrollo de videojuegos, un ejemplo muy reciente es “Dreams”, un juego
+ lanzado recientemente por Media Molecule y publicado por Sony para PlayStation
+ 4.
+ Se trata de un entorno de creación de juegos: da las herramientas necesarias
+ para poder crear tus propias mecánicas, niveles, música, etc [figura 2].
+ Usa muchos conceptos de programación de manera sencilla e interactiva para
+ que sea más entendible y tiene múltiples tutoriales que enseñan dichos
+ conceptos.
+ Los creadores de contenido tienen la oportunidad de publicar sus obras
+ en la misma plataforma, siendo no solo un entorno de creación sino de disfrute
+ y descubrimiento de las obras de la propia comunidad.
+ Tiene manejo sencillo, lo cual permite a cualquier usuario poder realizar
+ creaciones.
+ A su vez, puede llegar a un nivel de complejidad muy alto.
+ De esa manera es posible crear de todo: desde sencillos personajes, hasta
+ complejos sistemas de inteligencia artificial.
+\end_layout
+
+\begin_layout Standard
+Figura 2: Interfaz de creación de “Dreams”
+\end_layout
+
+\begin_layout Standard
+Content Examples from Unreal Engine 4 Es una guía gratuita que ofrece Epic
+ para explicar una gran cantidad de funcionalidades del motor.
+ Simula una visita a un museo, y mientras se prueba el proyecto se pueden
+ observar los resultados de lo que se enseña.
+ El proyecto hace una explicación breve y si se desea saber cómo funciona,
+ se puede abrir desde el editor y comprobarlo [figura 3].
+ Esta guía abarca tanto temas de físicas, matemáticas o programación, como
+ audio, animación o diseño.
+ No hay conexión entre las zonas ni mecánicas de juego para avanzar, pero
+ es un gran ejemplo para ver de primera mano todo lo que ofrece el motor
+ y poder interactuar con ello en tiempo real.
+ 
 \end_layout
 
 \begin_layout Standard
