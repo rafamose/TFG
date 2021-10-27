@@ -3,6 +3,9 @@
 
 #include "MyBlueprintFunctionLibrary.h"
 #include "Engine/Engine.h"
+#include "Engine/World.h"
+#include "GameFramework/Actor.h"
+#include "Kismet/GameplayStatics.h"
 #include "MySaveGame.h"
 
 void UMyBlueprintFunctionLibrary::SaveGame(AActor * MyActor)
@@ -11,17 +14,23 @@ void UMyBlueprintFunctionLibrary::SaveGame(AActor * MyActor)
 
 	SaveGameInstance->PlayerLocation = MyActor->GetActorLocation();
 
-	UGameplayStatics::SaveGameToSlot(SaveGameInstance, TEXT("MySlot"), 0);
+	FString LevelName = MyActor->GetWorld()->GetMapName();
+	LevelName.RemoveFromStart(MyActor->GetWorld()->StreamingLevelsPrefix);
+	SaveGameInstance->LevelName = LevelName;
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Juego Guardado."));
+	UGameplayStatics::SaveGameToSlot(SaveGameInstance, TEXT("MySlot"), 0);
+	FString cadenaLocation = SaveGameInstance->PlayerLocation.ToString();
+
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Autoguardado activado"));
 }
 
-void UMyBlueprintFunctionLibrary::LoadGame(AActor * MyActor) {
+FVector UMyBlueprintFunctionLibrary::LoadGame(AActor * MyActor) {
 	UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveGameObject(UMySaveGame::StaticClass()));
 
 	SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot("MySlot", 0));
 
-	MyActor->SetActorLocation(SaveGameInstance->PlayerLocation);
+	UGameplayStatics::OpenLevel(MyActor->GetWorld(), FName(*SaveGameInstance->LevelName));
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Juego Cargado."));
+	return SaveGameInstance->PlayerLocation;
 }

@@ -23,10 +23,8 @@ void UReporteDePosicion::BeginPlay()
 	FString Nombre = GetOwner()->GetName();
 	FString Posicion = GetOwner()->GetTransform().GetLocation().ToString();
 
-	UE_LOG(LogTemp, Warning, TEXT("Hola wenas soy %s y estoy en %s"), *Nombre, *Posicion);
+	UE_LOG(LogTemp, Warning, TEXT("Hola, soy %s y estoy en %s"), *Nombre, *Posicion);
 
-	// ...
-	
 }
 
 

@@ -1,0 +1,2530 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage{palatino}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Introducción
+\end_layout
+
+\begin_layout Standard
+En este documento se mostrará todo el código diseñado y realizado para el
+ proyecto.
+\end_layout
+
+\begin_layout Standard
+El código principal está realizado en el lenguaje C++, y tiene las característic
+as y funciones propias del motor gráfico Unreal Engine, ya que en todo momento
+ se codifica en base a éste.
+ Así mismo, se mostrará los Blueprints creados, al ser un lenguaje de script
+ como tal, y se tratará de la misma manera.
+\end_layout
+
+\begin_layout Standard
+Así, este documento se divide en las funciones creadas con C++ y con Blueprints,
+ siendo a su vez separadas por clases y/o documentos.
+\end_layout
+
+\begin_layout Section
+Ficheros
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Código C++
+\end_layout
+
+\begin_layout Standard
+A continuación mostrará cada una de las clases codificadas en lenguaje C++:
+\end_layout
+
+\begin_layout Section
+Clase 
+\emph on
+AbrirPuerta
+\end_layout
+
+\begin_layout Standard
+Esta clase es creada para poder abrir una clase por medio de un 
+\emph on
+trigger
+\emph default
+ de superposición, y que ésta se cierre al cabo de un tiempo.
+\end_layout
+
+\begin_layout Subsection
+Función 
+\emph on
+BeginPlay
+\end_layout
+
+\begin_layout Standard
+Ésta función se activa al comienzo del nivel y guarda el personaje usado
+ por el jugador como el actor que puede abrir la puerta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UAbrirPuerta::BeginPlay()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	Super::Beginplay();
+\end_layout
+
+\begin_layout Plain Layout
+
+	Owner = GetOwner();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	ActorThatOpens = GetWorld()->GetFirstPlayerController()->GetPawn();
+\end_layout
+
+\begin_layout Plain Layout
+
+	actorRotation = Owner->GetActorRotation();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Función 
+\shape italic
+OpenDoor
+\end_layout
+
+\begin_layout Standard
+Esta función es la que se encarga de abrir la puerta
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UAbrirPuerta::OpenDoor().
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	Owner->SetActorRotation( actorRotation + FRotator(0.f, -90.f, 0.f));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Función 
+\shape italic
+CloseDoor
+\end_layout
+
+\begin_layout Standard
+Esta función es la que se encarga de cerrar la puerta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UAbrirPuerta::CloseDoor()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	Owner->SetActorRotation(actorRotation);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Función
+\shape italic
+ TickComponent
+\end_layout
+
+\begin_layout Standard
+Esta función se activa en cada tick.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UAbrirPuerta::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
+ponentTickFunction* ThisTickFunction) 
+\end_layout
+
+\begin_layout Plain Layout
+
+{ 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (PressurePlate->IsOverlappingActor(ActorThatOpens))
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		OpenDoor();
+\end_layout
+
+\begin_layout Plain Layout
+
+		LastDoorOpenTime = GetWorld()->GetTimeSeconds();
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (GetWorld()->GetTimeSeconds() - LastDoorOpenTime > DoorCloseDelay)
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		CloseDoor();
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Clase MyBlueprintFunctionLibrary
+\end_layout
+
+\begin_layout Standard
+Esta clase es la usada para crear en C++ nuevos nodos para usar en tus Blueprint
+s
+\end_layout
+
+\begin_layout Subsection
+Fichero MyBlueprintFunctionLibrary.cpp
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsubsection
+Función SaveGame
+\end_layout
+
+\begin_layout Standard
+Esta función implementa la posibilidad de guardar partida en cualquier momento.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UMyBlueprintFunctionLibrary::SaveGame(AActor * MyActor)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveG
+ameObject(UMySaveGame::StaticClass()));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	SaveGameInstance->PlayerLocation = MyActor->GetActorLocation();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	FString LevelName = MyActor->GetWorld()->GetMapName();
+\end_layout
+
+\begin_layout Plain Layout
+
+	LevelName.RemoveFromStart(MyActor->GetWorld()->StreamingLevelsPrefix);
+\end_layout
+
+\begin_layout Plain Layout
+
+	SaveGameInstance->LevelName = LevelName;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	UGameplayStatics::SaveGameToSlot(SaveGameInstance, TEXT("MySlot"), 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	FString cadenaLocation = SaveGameInstance->PlayerLocation.ToString();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Juego Guardado."))
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Función LoadGame
+\end_layout
+
+\begin_layout Standard
+Esta función implementa la posibilidad de cargar en cualquier momento una
+ partida anteriormente guardada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FVector UMyBlueprintFunctionLibrary::LoadGame(AActor * MyActor)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	UMySaveGame* SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::CreateSaveG
+ameObject(UMySaveGame::StaticClass()));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot("MySlot
+", 0));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	UGameplayStatics::OpenLevel(MyActor->GetWorld(), FName(*SaveGameInstance->Level
+Name));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	return SaveGameInstance->PlayerLocation;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Clase Grabber
+\end_layout
+
+\begin_layout Standard
+Esta clase implementa una mecánica de agarrar objetos.
+\end_layout
+
+\begin_layout Subsection
+Archivo Grabber.h
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Fill out your copyright notice in the Description page of Project Settings.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#pragma once
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "CoreMinimal.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "PhysicsEngine/PhysicsHandleComponent.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "Components/InputComponent.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "Components/ActorComponent.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "Grabber.generated.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+\end_layout
+
+\begin_layout Plain Layout
+
+class PRUEBA_API UGrabber : public UActorComponent
+\end_layout
+
+\begin_layout Plain Layout
+
+{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	GENERATED_BODY()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public:
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Sets default values for this component's properties
+\end_layout
+
+\begin_layout Plain Layout
+
+	UGrabber();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+protected:
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Called when the game starts
+\end_layout
+
+\begin_layout Plain Layout
+
+	virtual void BeginPlay() override;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public:
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Called every frame
+\end_layout
+
+\begin_layout Plain Layout
+
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
+tTickFunction* ThisTickFunction) override;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+private:
+\end_layout
+
+\begin_layout Plain Layout
+
+	float Reach = 200.f;
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	UPhysicsHandleComponent* PhysicsHandle = nullptr;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	UInputComponent* InputComponent = nullptr;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	void Grab();
+\end_layout
+
+\begin_layout Plain Layout
+
+	void Released();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	FHitResult GetFirstPhysicsBodyInReach() const;
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Archivo Grabber.cpp
+\end_layout
+
+\begin_layout Subsubsection
+Función BeginPlay
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UGrabber::BeginPlay()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	Super::BeginPlay();
+\end_layout
+
+\begin_layout Plain Layout
+
+	UE_LOG(LogTemp, Warning, TEXT("Grabber!"));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
+\end_layout
+
+\begin_layout Plain Layout
+
+	InputComponent = GetOwner()->FindComponentByClass<UInputComponent>();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (InputComponent) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		UE_LOG(LogTemp, Warning, TEXT("Estamos perfectos con el input component"));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		InputComponent->BindAction("Agarrar", IE_Pressed, this, &UGrabber::Grab);
+\end_layout
+
+\begin_layout Plain Layout
+
+		InputComponent->BindAction("Agarrar", IE_Released, this, &UGrabber::Released);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	else
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		UE_LOG(LogTemp, Error, TEXT("%s missing input component"), *GetOwner()->GetNam
+e());
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (PhysicsHandle)
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		UE_LOG(LogTemp, Warning, TEXT("Estamos perfectos con el physics component"));
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	else
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		UE_LOG(LogTemp, Error, TEXT("%s missing physics component"), *GetOwner()->GetN
+ame());
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Función Grab
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UGrabber::Grab()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	auto HitResult = GetFirstPhysicsBodyInReach();
+\end_layout
+
+\begin_layout Plain Layout
+
+	auto ComponentToGrab = HitResult.GetComponent();
+\end_layout
+
+\begin_layout Plain Layout
+
+	auto ActorHit = HitResult.GetActor();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (ActorHit)
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		PhysicsHandle->GrabComponent(
+\end_layout
+
+\begin_layout Plain Layout
+
+			ComponentToGrab,
+\end_layout
+
+\begin_layout Plain Layout
+
+			NAME_None,
+\end_layout
+
+\begin_layout Plain Layout
+
+			ComponentToGrab->GetOwner()->GetActorLocation(),
+\end_layout
+
+\begin_layout Plain Layout
+
+			true
+\end_layout
+
+\begin_layout Plain Layout
+
+		);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Función Released
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UGrabber::Released()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	PhysicsHandle->ReleaseComponent();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Función GetFirstPhysicsBodyInReach
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+FHitResult UGrabber::GetFirstPhysicsBodyInReach() const {
+\end_layout
+
+\begin_layout Plain Layout
+
+	FVector PlayerViewPointLocation;
+\end_layout
+
+\begin_layout Plain Layout
+
+	FRotator PlayerViewPointRotation;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(
+\end_layout
+
+\begin_layout Plain Layout
+
+		OUT PlayerViewPointLocation,
+\end_layout
+
+\begin_layout Plain Layout
+
+		OUT PlayerViewPointRotation 
+\end_layout
+
+\begin_layout Plain Layout
+
+	); 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	FVector LineTraceEnd = PlayerViewPointLocation + PlayerViewPointRotation.Vector(
+) * Reach;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	FCollisionQueryParams TraceParameters(FName(TEXT("")), false, GetOwner());
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	FHitResult Hit;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	GetWorld()->LineTraceSingleByObjectType(
+\end_layout
+
+\begin_layout Plain Layout
+
+		OUT Hit,
+\end_layout
+
+\begin_layout Plain Layout
+
+		PlayerViewPointLocation,
+\end_layout
+
+\begin_layout Plain Layout
+
+		LineTraceEnd,
+\end_layout
+
+\begin_layout Plain Layout
+
+		FCollisionObjectQueryParams(ECollisionChannel::ECC_PhysicsBody),
+\end_layout
+
+\begin_layout Plain Layout
+
+		TraceParameters
+\end_layout
+
+\begin_layout Plain Layout
+
+	);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	return Hit;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Función TickComponent
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
+ntTickFunction* ThisTickFunction)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+\end_layout
+
+\begin_layout Plain Layout
+
+	FVector PlayerViewPointLocation;
+\end_layout
+
+\begin_layout Plain Layout
+
+	FRotator PlayerViewPointRotation;
+\end_layout
+
+\begin_layout Plain Layout
+
+	GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(
+\end_layout
+
+\begin_layout Plain Layout
+
+		OUT PlayerViewPointLocation,
+\end_layout
+
+\begin_layout Plain Layout
+
+		OUT PlayerViewPointRotation
+\end_layout
+
+\begin_layout Plain Layout
+
+	);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	FVector LineTraceEnd = PlayerViewPointLocation + PlayerViewPointRotation.Vector(
+) * Reach;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (PhysicsHandle->GrabbedComponent)
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		PhysicsHandle->SetTargetLocation(LineTraceEnd);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Clase ReporteDePosicion
+\end_layout
+
+\begin_layout Standard
+Esta clase implementa un sistema para conocer la posición actual de cualquier
+ actor al comienzo del nivel, usado con el fin de realizar pruebas.
+\end_layout
+
+\begin_layout Subsection
+Función BeginPlay
+\end_layout
+
+\begin_layout Standard
+Esta es la función que muestra por consola dónde se encuentra el actor que
+ use esta clase:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UReporteDePosicion::BeginPlay()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	Super::BeginPlay();
+\end_layout
+
+\begin_layout Plain Layout
+
+	FString Nombre = GetOwner()->GetName();
+\end_layout
+
+\begin_layout Plain Layout
+
+	FString Posicion = GetOwner()->GetTransform().GetLocation().ToString();
+\end_layout
+
+\begin_layout Plain Layout
+
+	UE_LOG(LogTemp, Warning, TEXT("Hola, soy %s y estoy en %s"), *Nombre, *Posicion
+);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Clase Watcher
+\end_layout
+
+\begin_layout Standard
+Esta clase es usada para la cámara de vigilancia del nivel 1.
+\end_layout
+
+\begin_layout Subsection
+Fichero Watcher.h
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// Fill out your copyright notice in the Description page of Project Settings.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#pragma once
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "GameFramework/Actor.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "Engine/TriggerVolume.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "CoreMinimal.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "Components/ActorComponent.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "Watcher.generated.h"
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+\end_layout
+
+\begin_layout Plain Layout
+
+class PRUEBA_API UWatcher : public UActorComponent {
+\end_layout
+
+\begin_layout Plain Layout
+
+	GENERATED_BODY()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public:
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Sets default values for this component's properties
+\end_layout
+
+\begin_layout Plain Layout
+
+	UWatcher();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+protected:
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Called when the game starts
+\end_layout
+
+\begin_layout Plain Layout
+
+	virtual void BeginPlay() override;
+\end_layout
+
+\begin_layout Plain Layout
+
+	void FadeOut();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public:
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Called every frame
+\end_layout
+
+\begin_layout Plain Layout
+
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
+tTickFunction* ThisTickFunction) override;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+\end_layout
+
+\begin_layout Plain Layout
+
+	ATriggerVolume* WatcherTrigger;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	AActor* MyActor;
+\end_layout
+
+\begin_layout Plain Layout
+
+	AActor* Owner;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+\end_layout
+
+\begin_layout Plain Layout
+
+	FVector ActorPosition;
+\end_layout
+
+\begin_layout Plain Layout
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+\end_layout
+
+\begin_layout Plain Layout
+
+	bool restart = true;
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Fichero Watcher.cpp
+\end_layout
+
+\begin_layout Subsubsection
+Constructor
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+UWatcher::UWatcher() {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	// Set this component to be initialized when the game starts, and to be
+ ticked every frame.
+  You can turn these features
+\end_layout
+
+\begin_layout Plain Layout
+
+	// off to improve performance if you don't need them.
+\end_layout
+
+\begin_layout Plain Layout
+
+	PrimaryComponentTick.bCanEverTick = true;
+\end_layout
+
+\begin_layout Plain Layout
+
+	restart = true;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Función BeginPlay
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UWatcher::BeginPlay()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	Super::BeginPlay();
+\end_layout
+
+\begin_layout Plain Layout
+
+	Owner = GetOwner();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	MyActor = GetWorld()->GetFirstPlayerController()->GetPawn();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Función FadeOut
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UWatcher::FadeOut()
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	APlayerController * Controller = UGameplayStatics::GetPlayerController(GetWorld
+(), 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	class APlayerController * MyPC = Cast<APlayerController>(Controller);
+\end_layout
+
+\begin_layout Plain Layout
+
+	MyPC->ClientSetCameraFade(true, FColor::Black, FVector2D(1.0, 0.0), 10.0);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Función TickComponent
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language={C++},numbers=left,basicstyle={\footnotesize\ttfamily},breaklines=true,showstringspaces=false,tabsize=2,backgroundcolor={\color{backcolour}},commentstyle={\color{codegreen}},keywordstyle={\color{magenta}},stringstyle={\color{codepurple}},breakatwhitespace=false,captionpos=b,keepspaces=true,numbersep=5pt,showtabs=false,breaklines=true,postbreak={\mbox{\textcolor{red}{$\hookrightarrow$}\space}}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void UWatcher::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
+ntTickFunction* ThisTickFunction)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (WatcherTrigger->IsOverlappingActor(MyActor))
+\end_layout
+
+\begin_layout Plain Layout
+
+	{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+		FadeOut();
+\end_layout
+
+\begin_layout Plain Layout
+
+		MyActor->SetActorLocation(ActorPosition);
+\end_layout
+
+\begin_layout Plain Layout
+
+		restart = false;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Blueprints
+\end_layout
+
+\begin_layout Standard
+En este capitulo se mostrará cada uno de los blueprints programados para
+ el proyecto.
+ Cada uno se dividirá en módulos lo suficientemente individuales para poder
+ ser explicados por separado, ya que el tamaño de éstos es tan grande que
+ no es posible mostrarlo todo a la vez.
+\end_layout
+
+\begin_layout Section
+Blueprint MyGameInstance
+\end_layout
+
+\begin_layout Standard
+Este blueprint es lo que se le llama la instancia del juego.
+ Aquí se almacenan las variables globales, así como las funciones globales.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+GotInput
+\series default
+: Esta variable sirve para detectar cuándo se ha introducido una respuesta
+ en un test.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+NPC_ID
+\series default
+: determina el identificador del actor en una conversación.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LineCurrent
+\series default
+: determina el identificador de la línea de diálogo actual que se muestra
+ en pantalla.
+\end_layout
+
+\begin_layout Subsection
+Get Answer
+\end_layout
+
+\begin_layout Standard
+Esta función devuelve las respuestas de un test dado el identificador de
+ la pregunta.
+\end_layout
+
+\begin_layout Subsubsection
+Leer base de datos
+\end_layout
+
+\begin_layout Standard
+Lo primero que se hace es acceder a la base de datos de diálogo y sacar
+ todas las filas, como podemos observar en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MyGameInstance-GetAnswer1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/MyGameInstance/GetAnswer/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+MyGameInstance GetAnswer1
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:MyGameInstance-GetAnswer1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Guardar respuestas correspondientes
+\end_layout
+
+\begin_layout Standard
+Recoge las respuestas que tengan el identificador de pregunta que se pasó
+ por argumento.
+ Cuando se haya recorrido toda la base de datos, termina la función y devuelve
+ las respuestas encontradas.
+ Lo podemos ver en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MyGameInstance-GetAnswer2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/MyGameInstance/GetAnswer/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+MyGameInstance GetAnswer2
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:MyGameInstance-GetAnswer2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint ButtonTest1
+\end_layout
+
+\begin_layout Standard
+Este blueprint se usa para el actor responsable de mostrar el test perteneciente
+ al nivel 2.
+ Se encarga tanto de mostrar el diálogo en pantalla, como de realizar las
+ acciones y cálculos necesarios para que el test funcione correctamente.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+NPC_ID
+\series default
+: determina el identificador del actor
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conversation_ID
+\series default
+: determina el identificador de la conversación, que cambia al pasar correctamen
+te todo el test.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LineCurrent
+\series default
+: determina el identificador de la línea de diálogo actual que se muestra
+ en pantalla.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+DialogueText
+\series default
+: texto de la línea de diálogo actual.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+MyDialogue
+\series default
+: recoge todas las líneas de diálogo correspondientes al actor.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+DialogueWidget
+\series default
+: la interfaz de diálogo que aparece en pantalla en las líneas de diálogo
+ sin test.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+DialogueBoxWidget
+\series default
+: la interfaz de diálogo que aparece en pantalla en las líneas de diálogo
+ con test.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+actorVariable
+\series default
+: actor que posee las variables del nivel.
+ Se guarda para acceder a ellas rápidamente.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+isQuestion
+\series default
+: booleano que indica si la línea de diálogo actual es una pregunta o no.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+testPhase
+\series default
+: variable que indica la fase del test en la que nos encontramos (¡¡¡¡¡¡¡ver
+ si se puede eliminar con la variable de la base de datos!!!!!!!!!!)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Answers
+\series default
+: array que contiene las respuestas ordenadas, para saber así cual es la
+ correcta.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Options
+\series default
+: respuestas del test que, además de estar desordenadas, están en el tipo
+ de variable que necesita la interfaz.
+\end_layout
+
+\begin_layout Subsection
+BeginPlay
+\end_layout
+
+\begin_layout Standard
+BeginPlay es el evento que se ejecuta al comienzo del nivel.
+\end_layout
+
+\begin_layout Subsubsection
+Visibilidad de esferas y variables de nivel
+\end_layout
+
+\begin_layout Standard
+Lo primero que hace es determinar la visibilidad de las esferas que formaran
+ parte del nivel.
+ Además, recoge el actor que posee las variables de nivel, para usarlas
+ más adelante.
+ Se puede ver en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ButtonTest1-BeginPlay-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCBUTTONBEGIN1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 BeginPlay 1
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ButtonTest1-BeginPlay-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Diálogo Test
+\end_layout
+
+\begin_layout Standard
+Después, recoge y guarda en una variable todo el diálogo correspondiente
+ a este actor, determinado por la variable NPC_ID.
+ Se muestra en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ButtonTest1-BeginPlay-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCBUTTON1BEGIN2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 BeginPlay 2
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ButtonTest1-BeginPlay-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Interact
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el personaje interactúa con el actor con la
+ tecla correspondiente.
+\end_layout
+
+\begin_layout Subsubsection
+Cambio de cámara
+\end_layout
+
+\begin_layout Standard
+Lo primero que hace es cambiar la cámara, apuntando hacia el escenario en
+ el que van a suceder los eventos, para tener una clara visión de qué ocurrirá
+ a medida que avances por el test
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCBUTTON1INTERACT1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 1
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ButtonTest1-Interact-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Crear y añadir interfaz
+\end_layout
+
+\begin_layout Standard
+A continuación crea el widget o interfaz de diálogo y lo añade a la pantalla.
+ Además, recoge la instancia de juego para acceder a las variables y funciones
+ globales.
+ Lo vemos en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ButtonTest1-Interact-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCBUTTON1INTERACT2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 2
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ButtonTest1-Interact-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Recoger diálogo y detectar pregunta
+\end_layout
+
+\begin_layout Standard
+Gracias a la función global, se recoge el diálogo y el resto de variables
+ de la base de datos.
+ Además, si fuese una pregunta, llama a la función para recoger las respuestas.
+ Se puede observar en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ButtonTest1-Interact-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCButton1/Interact/3.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 3 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ButtonTest1-Interact-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Recoger respuestas
+\end_layout
+
+\begin_layout Standard
+A continuación, si el diálogo es una pregunta, usa una función global para
+ recoger las respuestas correspondientes a la pregunta.
+ Las almacena y luego las convierte al tipo de variable necesario, para
+ después volver a almacenarlas desordenadas, como se puede observar en la
+ figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ButtonTest1-Interact-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCButton1/Interact/4.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 4
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ButtonTest1-Interact-4"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+aaaaaaaa
+\end_layout
+
+\end_body
+\end_document

@@ -44,6 +44,7 @@ public:
 
 
 	FRotator actorRotation;
+	UPROPERTY(EditAnywhere)
 	AActor* ActorThatOpens;
 	AActor* Owner;
 };

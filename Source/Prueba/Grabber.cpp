@@ -57,7 +57,6 @@ void UGrabber::BeginPlay()
 }
 
 void UGrabber::Grab() {
-	//UE_LOG(LogTemp, Warning, TEXT("Boton pulsao"));
 
 	auto HitResult = GetFirstPhysicsBodyInReach();
 	auto ComponentToGrab = HitResult.GetComponent();
@@ -65,7 +64,6 @@ void UGrabber::Grab() {
 
 	if (ActorHit)
 	{
-		//UE_LOG(LogTemp, Warning, TEXT("Boton pulsao otra ve"));
 		PhysicsHandle->GrabComponent(
 			ComponentToGrab,
 			NAME_None,
@@ -85,25 +83,13 @@ FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
 {
 	FVector PlayerViewPointLocation;
 	FRotator PlayerViewPointRotation;
+
 	GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(
 		OUT PlayerViewPointLocation,
 		OUT PlayerViewPointRotation
 	);
 	
-	//UE_LOG(LogTemp, Warning, TEXT("Location: %s, Position: %s"), *PlayerViewPointLocation.ToString(), *PlayerViewPointRotation.ToString());
-
 	FVector LineTraceEnd = PlayerViewPointLocation + PlayerViewPointRotation.Vector() * Reach;
-
-	DrawDebugLine(
-		GetWorld(),
-		PlayerViewPointLocation,
-		LineTraceEnd,
-		FColor(255, 0, 0),
-		false,
-		0.f,
-		0.f,
-		10.f
-	);
 
 	FCollisionQueryParams TraceParameters(FName(TEXT("")), false, GetOwner());
 
@@ -117,10 +103,6 @@ FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
 		TraceParameters
 	);
 
-	AActor* ActorHit = Hit.GetActor();
-	if (ActorHit) {
-		UE_LOG(LogTemp, Warning, TEXT("Line is hitting: %s"), *(ActorHit->GetName()));
-	}
 	return Hit;
 }
 

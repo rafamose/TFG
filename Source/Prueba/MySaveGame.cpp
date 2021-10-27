@@ -8,4 +8,5 @@ UMySaveGame::UMySaveGame()
 	PlayerLocation = FVector(0.f, 0.f, 0.f);
 	SaveSlotName = TEXT("TestSaveSlot");
 	UserIndex = 0;
+	LevelName = TEXT("Level1");
 }

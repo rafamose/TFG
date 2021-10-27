@@ -15,7 +15,6 @@ UWatcher::UWatcher()
 	PrimaryComponentTick.bCanEverTick = true;
 	restart = true;
 
-	// ...
 }
 
 
@@ -26,7 +25,6 @@ void UWatcher::BeginPlay()
 	Owner = GetOwner();
 
 	MyActor = GetWorld()->GetFirstPlayerController()->GetPawn();
-	// ...
 	
 }
 void UWatcher::FadeOut()
@@ -47,7 +45,5 @@ void UWatcher::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 		restart = false;
 	}
 
-
-	//
 }
 

@@ -28,6 +28,9 @@ public:
 	uint32 UserIndex;
 
 	UPROPERTY(VisibleAnywhere, Category = Basic)
+	FString LevelName;
+
+	UPROPERTY(VisibleAnywhere, Category = Basic)
 	FVector PlayerLocation;
 
 	UMySaveGame();
