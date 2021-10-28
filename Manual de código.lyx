@@ -392,6 +392,14 @@ s
 \end_layout
 
 \begin_layout Subsection
+Fichero MyBlueprintFunctionLibrary.cpp
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsubsection
 Función SaveGame
 \end_layout
 
@@ -483,7 +491,7 @@ ameObject(UMySaveGame::StaticClass()));
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Función LoadGame
 \end_layout
 
@@ -540,7 +548,12 @@ Name));
 
 \begin_layout Plain Layout
 
-	return SaveGameInstance->PlayerLocation; }
+	return SaveGameInstance->PlayerLocation;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset

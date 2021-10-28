@@ -1897,9 +1897,9 @@ Contexto del Sistema
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="23" columns="2">
-<features tabularvalignment="middle">
+<features tabularvalignment="middle" tabularwidth="100text%">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2394,6 +2394,739 @@ Flujo principal:
 
 \end_layout
 
+\begin_layout Chapter
+Modelado dinámico
+\end_layout
+
+\begin_layout Standard
+En este capítulo se verán los principales diagramas de secuencia del proyecto.
+ Un diagrama de secuencia relaciona los distintos modelos del sistema a
+ través del tiempo, indicando los cambios de los mismos.
+\end_layout
+
+\begin_layout Section
+Diagramas de secuencia
+\end_layout
+
+\begin_layout Subsection
+Diagrama de secuencia de botón de test 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Diagrama de secuencia/Intitulado.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contexto del Sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+DISEÑO DEL SISTEMA
+\end_layout
+
+\begin_layout Chapter
+Diseño de niveles
+\end_layout
+
+\begin_layout Standard
+En este capítulo trataremos de la composición de cada uno de los niveles,
+ sus elementos y la disposición en el mismo.
+\end_layout
+
+\begin_layout Standard
+La intención ha sido la de tener un diseño sencillo e intuitivo, nada cargado,
+ para que los elementos importantes del nivel estén claramente diferenciados
+\end_layout
+
+\begin_layout Section
+Nivel 1
+\end_layout
+
+\begin_layout Standard
+El primer nivel se basa en explicar conceptos físicos de Unreal Engine.
+ En concreto, habla de las diferencias de objetos en base a su tipo de colisión.
+ El aspecto del nivel es el que se observa en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Aspecto-de-la"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas diseño 1/Nivel1 1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Aspecto de la zona 1 del nivel 1 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Aspecto-de-la"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nada más aparecer, un diálogo aparecerá en pantalla, dando la bienvenida
+ y haciendo una explicación general del tutorial y el nivel.
+ Todos los diálogos están escritos desde el punto de vista de un gato llamado
+ Uri.
+\end_layout
+
+\begin_layout Standard
+Hay tres botones explicativos en esta sala:
+\end_layout
+
+\begin_layout Itemize
+El botón de la izquierda explica los objetos del tipo 
+\begin_inset Quotes fld
+\end_inset
+
+block
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+El botón de la derecha explica los objetos del tipo 
+\begin_inset Quotes fld
+\end_inset
+
+ignore
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+El botón del fondo explica los objetos de tipo 
+\begin_inset Quotes fld
+\end_inset
+
+overlap
+\begin_inset Quotes frd
+\end_inset
+
+ y los 
+\begin_inset Quotes fld
+\end_inset
+
+triggers
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Justo delante tiene un trigger, como se ve en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Aspecto-de-la-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ en el que tienes que soltar una esfera para abrir la puerta a la siguente
+ zona
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas diseño 1/Nivel 1 trigger.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Trigger del nivel 1 para pasar a la siguiente zona 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Aspecto-de-la-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Justo al pasar por la puerta a la siguiente zona del nivel 1, se activa
+ un autoguardado.
+\end_layout
+
+\begin_layout Standard
+La siguiente zona, al comienzo, tiene el aspecto de la figura
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas diseño 1/Nivel 1 2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Segunda zona del nivel 1 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Aspecto-de-la-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta zona hay únicamente un botón.
+ Al interactuar con él, te explica el uso de los triggers como cámaras de
+ seguridad.
+ Al explicarlo, se hace visible el cono correspondiente al trigger de la
+ cámara, y queda de la manera que se ve en la figura
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Aspecto-de-la-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas diseño 1/Nivel1 cono visible.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Trigger de la cámara activado en el nivel 1 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Aspecto-de-la-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora que el trigger es visible, puedes pasar al final de la zona y entrar
+ al portal que te lleva al nivel 2.
+\end_layout
+
+\begin_layout Section
+Nivel 2
+\end_layout
+
+\begin_layout Standard
+Al aparecer en el nivel 2, vas a ver la habitación que se muestra en la
+ figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Aspecto-de-la-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Este nivel está basado en enseñar conceptos de C++ específicos de Unreal
+ Engine.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas diseño 1/Nivel 2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Trigger del nivel 1 para pasar a la siguiente zona 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Aspecto-de-la-4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A cada lado de la habitación hay tres botones explicativos, iguales que
+ los del nivel 1.
+ Al pulsarlos, te explicarán un concepto correspondiente a la imagen que
+ haya justo detrás de dicho botón.
+\end_layout
+
+\begin_layout Standard
+Cuando se lean las seis explicaciones, se abrirá la puerta para la siguiente
+ zona de este nivel.
+ Al igual que en el anterior nivel, al pasar por la puerta se activará el
+ autoguardado.
+\end_layout
+
+\begin_layout Standard
+La segunda zona tiene el aspecto que se aprecia en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Aspecto-de-la-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas diseño 1/Nivel 2 2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Trigger del nivel 1 para pasar a la siguiente zona 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Aspecto-de-la-5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hay un único botón, y al pulsarlo, la cámara apuntará al fondo de la habitación.
+ En ese momento comenzará un diálogo de test.
+ Cuando te plantee una pregunta, te dará 3 opciones, ordenadas de forma
+ aleatoria, que se verán como en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Aspecto-de-la-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas diseño 1/Nivel 2 camara.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Trigger del nivel 1 para pasar a la siguiente zona 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Aspecto-de-la-6"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al acertar todas las preguntas, una esfera se acercará al jugador, y cuando
+ éste interactúe con la esfera, será transportado al nivel 3.
+\end_layout
+
+\begin_layout Section
+Nivel 3
+\end_layout
+
+\begin_layout Standard
+El nivel 3 es el último nivel, y está dedicado a la programación por blueprints,
+ original de Unreal Engine.
+\end_layout
+
+\begin_layout Standard
+La primera zona es similar a la del anterior nivel.
+ Varios botones explicativos en cada pared, cada uno con su imágen correspondien
+te en la pared.
+ La sala es como se puede observar en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Aspecto-de-la-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas diseño 1/Nivel 3.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Trigger del nivel 1 para pasar a la siguiente zona 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Aspecto-de-la-7"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al igual que en el nivel anterior, cuando se lean todas las explicaciones,
+ se abrirá la puerta para acceder a la segunda zona del nivel, la cual tiene
+ el aspecto de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Aspecto-de-la-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas diseño 1/Nivel 3 2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Trigger del nivel 1 para pasar a la siguiente zona 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Aspecto-de-la-8"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aquí se encontrará un botón principal, en medio de la habitación.
+ Este botón comenzará otro test, algo distinto.
+ Al tener que elegir entre nodos 
+\begin_inset Quotes fld
+\end_inset
+
+blueprints
+\begin_inset Quotes frd
+\end_inset
+
+, para más comodidad, las opciones aparecerán en la pared.
+ Cada opción tendrá su correspondiente botón.
+ Se verá como en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Aspecto-de-la-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas diseño 1/Nivel 3 opciones.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Trigger del nivel 1 para pasar a la siguiente zona 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Aspecto-de-la-9"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando se acierten todas las preguntas, se activa el portal del fondo.
+ Al entrar en dicho portal, volverá al menú principal.
+\end_layout
+
 \begin_layout Part
 PRUEBAS
 \end_layout
@@ -2470,7 +3203,7 @@ Nivel 1
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="11" columns="3">
+<lyxtabular version="3" rows="10" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2745,7 +3478,7 @@ Vuelve al menú principal
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2754,7 +3487,7 @@ Vuelve al menú principal
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2771,40 +3504,11 @@ Seguir
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Vuelve a dar control al personaje y desaparece el menú de pausa
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Vuelve a dar control al personaje y desaparece el menú de pausa
 \end_layout
 
 \end_inset
@@ -2833,613 +3537,6 @@ A continuación veremos los distintos casos que se pueden dar en este nivel.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="17" columns="3">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CASO
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-DESCRIPCIÓN
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-RESULTADO ESPERADO
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El personaje aparece en el nivel
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Se activa el auto-guardado
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario interacciona con uno de los botones explicativos
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Se muestra el diálogo en pantalla correspondiente a la imágen de la pared
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario interacciona con todos los botones explicativos
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Se abre la puerta a la segunda zona
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El personaje pasa a través de la puerta
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Se activa el auto-guardado
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario interacciona con el botón de test
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Comienza el diálogo del test y las preguntas, junto con las opciones, se
- muestran correctamente
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-6
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario elige la opción 
-\begin_inset Quotes fld
-\end_inset
-
-TickComponent
-\begin_inset Quotes frd
-\end_inset
-
- en la primera pregunta
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Aparecen muchas esferas, se repite la pregunta y se muestra el diálogo correspon
-diente
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario elige la opción 
-\begin_inset Quotes fld
-\end_inset
-
-Constructor
-\begin_inset Quotes frd
-\end_inset
-
- en la primera pregunta
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Se repite la pregunta y se muestra el diálogo correspondiente
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario elige la opción 
-\begin_inset Quotes fld
-\end_inset
-
-BeginPlay
-\begin_inset Quotes frd
-\end_inset
-
- en la primera pregunta
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Se avanza a la siguiente pregunta y se muestra el diálogo correspondiente
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-9
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario elige las opciones 
-\begin_inset Quotes fld
-\end_inset
-
-BeginPlay
-\begin_inset Quotes frd
-\end_inset
-
- o 
-\begin_inset Quotes fld
-\end_inset
-
-TickComponent
-\begin_inset Quotes frd
-\end_inset
-
- en la segunda pregunta
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Se repite la pregunta y se muestra el diálogo correspondiente
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-10
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario elige la opción 
-\begin_inset Quotes fld
-\end_inset
-
-Constructor
-\begin_inset Quotes frd
-\end_inset
-
- en la segunda pregunta
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Se avanza a la siguiente pregunta y se muestra el diálogo correspondiente
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-11
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario elige las opciones 
-\begin_inset Quotes fld
-\end_inset
-
-UE_LOG
-\begin_inset Quotes frd
-\end_inset
-
- o 
-\begin_inset Quotes fld
-\end_inset
-
-include
-\begin_inset Quotes frd
-\end_inset
-
- en la tercera pregunta
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Se repite la pregunta y se muestra el diálogo correspondiente
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-12
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario elige la opción 
-\begin_inset Quotes fld
-\end_inset
-
-UPROPERTY
-\begin_inset Quotes frd
-\end_inset
-
- en la tercera pregunta
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Se muestra el diálogo correspondiente, se termina el test y la esfera mágica
- se acerca al jugador
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario intenta moverse cuando hay un diálogo en pantalla
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El personaje no se mueve
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario pulsa el botón de menú de pausa
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El menú de pausa se abre y el personaje se para
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-13
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario elige la opción de 
-\begin_inset Quotes fld
-\end_inset
-
-Salir
-\begin_inset Quotes frd
-\end_inset
-
- en el menú de pausa
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Vuelve al menú principal
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-El usuario elige la opción de 
-\begin_inset Quotes fld
-\end_inset
-
-Seguir
-\begin_inset Quotes frd
-\end_inset
-
- en el menú de pausa
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Vuelve a dar control al personaje y desaparece el menú de pausa
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-El resultado de las pruebas ha sido el esperado, así que damos las pruebas
- por satisfechas.
-\end_layout
-
-\begin_layout Subsection
-Nivel 3
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="14" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3897,11 +3994,623 @@ Se muestra el diálogo correspondiente, se termina el test y la esfera mágica
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario intenta moverse cuando hay un diálogo en pantalla
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El personaje no se mueve
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario pulsa el botón de menú de pausa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El menú de pausa se abre y el personaje se para
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario elige la opción de 
+\begin_inset Quotes fld
+\end_inset
+
+Salir
+\begin_inset Quotes frd
+\end_inset
+
+ en el menú de pausa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vuelve al menú principal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario elige la opción de 
+\begin_inset Quotes fld
+\end_inset
+
+Seguir
+\begin_inset Quotes frd
+\end_inset
+
+ en el menú de pausa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vuelve a dar control al personaje y desaparece el menú de pausa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El resultado de las pruebas ha sido el esperado, así que damos las pruebas
+ por satisfechas.
+\end_layout
+
+\begin_layout Subsection
+Nivel 3
+\end_layout
+
+\begin_layout Standard
+A continuación veremos los distintos casos que se pueden dar en este nivel.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="16" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CASO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DESCRIPCIÓN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RESULTADO ESPERADO
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El personaje aparece en el nivel
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Se activa el auto-guardado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario interacciona con uno de los botones explicativos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Se muestra el diálogo en pantalla correspondiente a la imágen de la pared
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario interacciona con todos los botones explicativos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Se abre la puerta a la segunda zona
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El personaje pasa a través de la puerta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Se activa el auto-guardado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario interacciona con el botón de test
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Comienza el diálogo del test y se muestra la primera pregunta.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Además, aparecen en la pared las distintas opciones.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario elige las opciones 2 o 3 en la primera pregunta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Se muestra el diálogo correspondiente de respuesta equivocada
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario elige la opción 1 en la primera pregunta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Se muestra diálogo de respuesta correcta, se formula la siguiente pregunta
+ y se cambian las imágenes de las opciones
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario elige las opciones 1 o 2 en la segunda pregunta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Se muestra el diálogo correspondiente de respuesta equivocada
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario elige la opción 3 en la segunda pregunta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Se muestra diálogo de respuesta correcta, se formula la siguiente pregunta
+ y se cambian las imágenes de las opciones
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario intenta moverse cuando hay un diálogo en pantalla
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El personaje no se mueve
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario pulsa el botón de menú de pausa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El menú de pausa se abre y el personaje se para
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario elige la opción de 
+\begin_inset Quotes fld
+\end_inset
+
+Salir
+\begin_inset Quotes frd
+\end_inset
+
+ en el menú de pausa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vuelve al menú principal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El usuario elige la opción de 
+\begin_inset Quotes fld
+\end_inset
+
+Seguir
+\begin_inset Quotes frd
+\end_inset
+
+ en el menú de pausa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vuelve a dar control al personaje y desaparece el menú de pausa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14
 \end_layout
 
 \end_inset

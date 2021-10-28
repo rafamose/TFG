@@ -423,12 +423,48 @@ ameObject(UMySaveGame::StaticClass()));
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
 	SaveGameInstance->PlayerLocation = MyActor->GetActorLocation();
 \end_layout
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+	FString LevelName = MyActor->GetWorld()->GetMapName();
+\end_layout
+
+\begin_layout Plain Layout
+
+	LevelName.RemoveFromStart(MyActor->GetWorld()->StreamingLevelsPrefix);
+\end_layout
+
+\begin_layout Plain Layout
+
+	SaveGameInstance->LevelName = LevelName;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
 	UGameplayStatics::SaveGameToSlot(SaveGameInstance, TEXT("MySlot"), 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	FString cadenaLocation = SaveGameInstance->PlayerLocation.ToString();
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -464,7 +500,7 @@ status open
 
 \begin_layout Plain Layout
 
-void UMyBlueprintFunctionLibrary::LoadGame(AActor * MyActor)
+FVector UMyBlueprintFunctionLibrary::LoadGame(AActor * MyActor)
 \end_layout
 
 \begin_layout Plain Layout
@@ -480,23 +516,31 @@ ameObject(UMySaveGame::StaticClass()));
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
 	SaveGameInstance = Cast<UMySaveGame>(UGameplayStatics::LoadGameFromSlot("MySlot
 ", 0));
 \end_layout
 
 \begin_layout Plain Layout
 
-	MyActor->SetActorLocation(SaveGameInstance->PlayerLocation);
 \end_layout
 
 \begin_layout Plain Layout
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Juego Cargado."));
+	UGameplayStatics::OpenLevel(MyActor->GetWorld(), FName(*SaveGameInstance->Level
+Name));
 \end_layout
 
 \begin_layout Plain Layout
 
-}
+\end_layout
+
+\begin_layout Plain Layout
+
+	return SaveGameInstance->PlayerLocation; }
 \end_layout
 
 \end_inset
