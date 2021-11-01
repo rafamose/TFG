@@ -104,6 +104,14 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
 Introducción
 \end_layout
@@ -159,23 +167,23 @@ Funcionamiento
 
 \begin_layout Standard
 El programa ofrecerá al usuario, el cual ya posee conocimientos de programación,
- un tutorial interactivo de conceptos útiles en unreal engine.
+ un tutorial interactivo de conceptos útiles en Unreal Engine.
  Dicho tutorial se compondrá de 3 niveles:
 \end_layout
 
 \begin_layout Itemize
 Un nivel físico, el cual explicará los principales estados que puede tener
- cada uno de los actores que se encuentran en un proyecto de Unreal Engine
+ cada uno de los actores que se encuentran en un proyecto de Unreal Engine.
 \end_layout
 
 \begin_layout Itemize
 Un nivel de blueprints, el cual enseñará el método de programación propio
- de Unreal Engine
+ de Unreal Engine.
 \end_layout
 
 \begin_layout Itemize
-Un nivel de c++, el cual enseñará conceptos de código C++ específicos de
- Unreal Engine
+Un nivel de C++, el cual enseñará conceptos de código C++ específicos de
+ Unreal Engine.
 \end_layout
 
 \begin_layout Subsection
@@ -183,14 +191,15 @@ Entorno
 \end_layout
 
 \begin_layout Standard
-El programa se podrá ejecutar desde cualquier dispositivo de Windows 7+.
+El programa se podrá ejecutar desde cualquier ordenador con una instalación
+ de Windows 7+.
  Aunque el entorno óptimo de ejecución del programa será en la versión de
  Windows 10.
 \end_layout
 
 \begin_layout Standard
-—El programa tendrá una interfaz sencilla e intuitiva, a pesar de que está
- dirigido a un público con conocimientos previos de programación
+El programa tendrá una interfaz sencilla e intuitiva, a pesar de que está
+ dirigido a un público con conocimientos previos de programación.
 \end_layout
 
 \begin_layout Subsection
@@ -199,9 +208,10 @@ Vida esperada
 
 \begin_layout Standard
 Se trata de un programa que enseña conceptos básicos de Unreal Engine en
- la versión 4.20., pero al no adentrarse en temas específicos, es posible
- que siga siendo útil en las versiones venideras.
- Es por ello que realmente la vida esperada del producto es incierta
+ la versión 4.20, pero al no adentrarse en temas avanzados, es posible que
+ siga siendo útil en las versiones venideras.
+ Es por ello que realmente la vida esperada del producto es incierta, si
+ bien se intentará que sea lo mayor posible.
 \end_layout
 
 \begin_layout Subsection
@@ -209,18 +219,10 @@ Ciclo de mantenimiento
 \end_layout
 
 \begin_layout Standard
-(empezar por lo positivo 
-\begin_inset Quotes fld
-\end_inset
-
-se prestará a modificaciones y nuevos añadidos si así se viese necesario
-\begin_inset Quotes frd
-\end_inset
-
-) El programa no necesitará de un mantenimiento periódico y solo se tratará
- en el caso de que éste contenga errores que sean descubiertos posteriormente.
- Aun así, se prestará a modificaciones y nuevos añadidos si así se viese
- necesario
+El programa se prestará a modificaciones y nuevos añadidos si así se viese
+ necesario, aunque no necesitará de un mantenimiento periódico y solo se
+ tratará en el caso de que éste contenga errores que sean descubiertos posterior
+mente.
 \end_layout
 
 \begin_layout Subsection
@@ -239,7 +241,7 @@ Marketplace
  de Unreal Engine propone una serie de muestras del motor, siento algunas
  de ellas interactivas, pero éstas no ponen a prueba al usuario.
  Es por ello que no tendría ningún competidor directo, aunque sí tendría
- bastantes competidores de una forma menos inmediata
+ bastantes competidores de una forma menos inmediata.
 \end_layout
 
 \begin_layout Subsection
@@ -248,19 +250,29 @@ Aspecto externo
 
 \begin_layout Standard
 El programa tendrá el aspecto de un videojuego al uso, controlándose mediante
- teclado o 
-\begin_inset Quotes fld
-\end_inset
-
-controller
-\begin_inset Quotes frd
-\end_inset
-
-
+ teclado y ratón.
 \end_layout
 
 \begin_layout Subsection
 Estandarización
+\end_layout
+
+\begin_layout Standard
+Se han usado códigos de estandarización recomendados por Unreal Engine.
+ Éstos son:
+\end_layout
+
+\begin_layout Itemize
+Organización de clases: dentro de la clase, el apartado público debe ser
+ declarado primero, seguido por el privado.
+\end_layout
+
+\begin_layout Itemize
+Aviso de copyright de Epic Games por la distribución en cada archivo fuente.
+\end_layout
+
+\begin_layout Itemize
+Los nombres de las variables deben comenzar por letra mayúscula
 \end_layout
 
 \begin_layout Subsection
@@ -276,7 +288,7 @@ Se asegurará de que el programa funcione correctamente y sea robusto mediante
 Al ser un entorno 3D es puede dar pie a pequeños errores físicos, por lo
  que será necesario comprobar cualquier situación y pulir lo que fuera necesario.
  En cambio, al ser una prueba lineal, el abanico de errores es bastante
- más pequeño del que podría ser si se otorgase algún grado más de libertad
+ más pequeño del que podría ser si se otorgase algún grado más de libertad.
 \end_layout
 
 \begin_layout Subsection
@@ -284,11 +296,81 @@ Programación de tareas
 \end_layout
 
 \begin_layout Standard
-Estas son las tareas que se llevarán acabo para la realización de este proyecto
+Estas son las tareas que se llevarán acabo para la realización de este proyecto.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Estudio y análisis del problema: 
+\series default
+En esta fase se realizará el aprendizaje de las herramientas que más tarde
+ se usarán, principalmente el motor gráfico Unreal Engine.
+ Además, se estudiará la peculiaridad de este, y las diferencias con respecto
+ al resto de motores del mercado, para así enseñar conocimientos propios
+ únicamente de Unreal Engine.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Diseño: 
+\series default
+En la fase de diseño se preparará una idea general de qué va a ser el tutorial,
+ las fases de las que constará y cómo se desarrollará cada una.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Implementación: 
+\series default
+Una vez realizado el diseño del programa, se procederá a la implementación
+ del mismo, así como la codificación.
+ Por una parte se realizarán todos los apartados físicos y visuales, diseñados
+ en la fase de diseño, y por otra parte se programará todo aquello que el
+ tutorial necesite para que su funcionamiento sea el esperado.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Pruebas: 
+\series default
+En esta fase se realizarán una serie de pruebas dedicadas a comprobar que
+ el funcionamiento del programa es el esperado.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Documentación: 
+\series default
+Esta tarea consiste en la realización de esta memoria técnica, así como
+ la documentación de todo el código del programa y un manual de usuario
+ para el uso de este.
 \end_layout
 
 \begin_layout Subsection
 Pruebas
+\end_layout
+
+\begin_layout Standard
+Para una asegurar la robustez del programa, así como su correcto funcionamiento,
+ se realizarán pruebas exhaustivas.
+\end_layout
+
+\begin_layout Standard
+Se probará cada uno de los niveles de forma individual, abarcando todas
+ las opciones disponibles para el jugador.
+ Además, para una mayor seguridad, el programa será probado por más usuarios,
+ con tal de corroborar el funcionamiento del mismo.
+\end_layout
+
+\begin_layout Standard
+El rendimiento también será probado, y para ello se ejecutará el programa
+ desde distintos ordenadores, comprobando que funcione correctamente siempre
+ y cuando cumplan con los requisitos mínimos.
 \end_layout
 
 \begin_layout Subsection
@@ -296,8 +378,9 @@ Seguridad
 \end_layout
 
 \begin_layout Standard
-No se ha contemplado ningún tipo de sistema de seguridad, al no haber datos
- personales con los que tratar.
+Más allá de garantizar la estabilidad del sistema, no se ha contemplado
+ ningún tipo de sistema de seguridad, al no haber datos personales con los
+ que tratar.
 \end_layout
 
 \begin_layout Chapter
@@ -310,11 +393,16 @@ Objetivo principal
 
 \begin_layout Standard
 El principal objetivo de este projecto será poder mostrar a nuevos usuarios
- del motor gráfico Unreal Engine diferentes características propias de éste.
+ del motor gráfico Unreal Engine diferentes características propias de éste
+ y transmitirles conocimientos básicos de su uso de forma interactiva.
 \end_layout
 
 \begin_layout Section
 Objetivos específicos
+\end_layout
+
+\begin_layout Standard
+Se deberán cumplir los siguientes objetivos específicos:
 \end_layout
 
 \begin_layout Section
@@ -356,8 +444,6 @@ Origen de los videojuegos
 \end_layout
 
 \begin_layout Standard
-
-\bar under
 La considerada primera “máquina de juegos” es “NIMATRON”[2], una máquina
  electromecánica para jugar al juego matemático Nim.
  Fue mostrada en la feria mundial de Nueva York en 1940 por el Dr.
@@ -374,8 +460,6 @@ La considerada primera “máquina de juegos” es “NIMATRON”[2], una máqui
 \end_layout
 
 \begin_layout Standard
-
-\bar under
 Los primeros videojuegos 3D en primera persona fueron “Maze War”, diseñado
  por Steve Celley, y “Spasim”, lanzado por Jim Bowery, ambos en 1974.
  Ambos permitían hasta 32 jugadores simultáneos.
@@ -399,8 +483,6 @@ Historia de Unreal Engine
 \end_layout
 
 \begin_layout Standard
-
-\bar under
 Originalmente, no existían los motores de videojuegos.
  Estos eran desarrollados como una única entidad, es decir, no había separación
  entre la parte lógica y la gráfica, así que las rutinas de dibujado debían
@@ -423,8 +505,6 @@ Originalmente, no existían los motores de videojuegos.
 \end_layout
 
 \begin_layout Standard
-
-\bar under
 Esa versión fue denominada como “Unreal Engine 1”, y entre sus características
  estaba la detección de colisión o el editor de niveles[7].
  Se crearon videojuegos de éxito como “X-COM: Enforcer” o el ya nombrado
@@ -459,8 +539,6 @@ Unreal Engine
 \end_layout
 
 \begin_layout Standard
-
-\bar under
 El motor que se va a usar se define a sí mismo como la plataforma más abierta
  y completa de creación de proyectos en 3D a tiempo real [8].
  Actualmente se encuentra en la versión 4.24.3., con una versión 4.25.
@@ -471,7 +549,11 @@ El motor que se va a usar se define a sí mismo como la plataforma más abierta
  Tiene integradas herramientas de todo tipo para mayor rapidez y simpleza,
  entre ellas herramientas de animación, de modelaje, sonido, iluminación,
  cinemática, y muchas más.
- Con respecto a la renderización, es un proceso que se realiza en segundo
+ 
+\end_layout
+
+\begin_layout Standard
+Con respecto a la renderización, es un proceso que se realiza en segundo
  plano y da la oportunidad de seguir trabajando mientras tanto.
  El programa tiene una perfecta integración con Visual Studio, lo cual da
  la oportunidad de modificar el código del proyecto con facilidad y rapidez,
@@ -482,8 +564,6 @@ El motor que se va a usar se define a sí mismo como la plataforma más abierta
 \end_layout
 
 \begin_layout Standard
-
-\bar under
 En Unreal Engine se divide en tres tipos: block, overlap e ignore.
  El primero de ellos no permite al objeto A traspasar el objeto B, mientras
  los otros dos sí.
@@ -495,14 +575,28 @@ En Unreal Engine se divide en tres tipos: block, overlap e ignore.
  más recomendada de realizar un proyecto.
  Con los blueprints te permite conectar o modificar de manera más intuitiva
  funciones, variables, objetos...
- Desde 2014, Unreal Engine tiene una tienda íntegra o “marketplace” para
+ 
+\end_layout
+
+\begin_layout Standard
+Desde 2014, Unreal Engine tiene una tienda íntegra o “marketplace” para
  adquirir recursos de pago hechos por la comunidad, empresas externas o
  la propia Epic Games.
  Cada mes ofrecen los llamados “Free of the Month”, recursos que anteriormente
  eran de pago y los ofrecen temporalmente sin ningún coste adicional.
  Entre estos recursos podemos encontrar: música, interfaces, modelos de
  personajes o escenario, animaciones, sonidos, inteligencia artificial y
- más.
+ más, como se puede ver en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Marketplace-de-Unreal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -527,6 +621,13 @@ status open
 
 \begin_layout Plain Layout
 Marketplace de Unreal Engine
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Marketplace-de-Unreal"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -548,11 +649,9 @@ Dreams
 \end_layout
 
 \begin_layout Standard
-
-\bar under
 Si hablamos de tutoriales interactivos sobre desarrollo de videojuegos,
- un ejemplo muy reciente es “Dreams”, un juego lanzado recientemente por
- Media Molecule y publicado por Sony para PlayStation 4.
+ un ejemplo muy reciente es “Dreams”, un videojuego lanzado recientemente
+ por Media Molecule y publicado por Sony para PlayStation 4.
  Se trata de un entorno de creación de juegos: da las herramientas necesarias
  para poder crear tus propias mecánicas, niveles, música, etc.
  Usa muchos conceptos de programación de manera sencilla e interactiva para
@@ -566,6 +665,17 @@ Si hablamos de tutoriales interactivos sobre desarrollo de videojuegos,
  A su vez, puede llegar a un nivel de complejidad muy alto.
  De esa manera es posible crear de todo: desde sencillos personajes, hasta
  complejos sistemas de inteligencia artificial.
+ En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Captura-de-Dreams"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ se puede ver el aspecto de este videojuego.
 \end_layout
 
 \begin_layout Standard
@@ -588,7 +698,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Dreams
+Captura de Dreams
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Captura-de-Dreams"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -610,12 +727,20 @@ Content Examples from Unreal Engine 4
 \end_layout
 
 \begin_layout Standard
-
-\bar under
 Es una guía gratuita que ofrece Epic para explicar una gran cantidad de
  funcionalidades del motor.
- Simula una visita a un museo, y mientras se prueba el proyecto se pueden
- observar los resultados de lo que se enseña.
+ Simula una visita a un museo, como se muestra en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Content-Examples-from"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, y mientras se prueba el proyecto se pueden observar los resultados de
+ lo que se enseña.
  El proyecto hace una explicación breve y si se desea saber cómo funciona,
  se puede abrir desde el editor y comprobarlo.
  Esta guía abarca tanto temas de físicas, matemáticas o programación, como
@@ -646,7 +771,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Content Examples from Unreal Engine 4 en el editor
+Content Examples from Unreal Engine 4 en el editor 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Content-Examples-from"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -676,7 +808,7 @@ Este apartado presentará las limitaciones o restricciones que se presentarán
 \end_layout
 
 \begin_layout Section
-Factores Dato
+Factores dato
 \end_layout
 
 \begin_layout Standard
@@ -689,14 +821,8 @@ ión que soporta el motor gráfico Unreal Engine.
 \end_layout
 
 \begin_layout Itemize
-Se usará, en su mayoría, recursos del propio motor gráfico y otros proporcionado
-s por la propia tienda de la plataforma Epic Games, siendo éstos recursos
- de software libre y, al menos los que usaremos, disponibles de forma gratuíta
-\end_layout
-
-\begin_layout Itemize
-El software usado en todo momento es totalmente gratuíto, tanto el entorno
- de programación Visual Studio como el propio motor gráfico Unreal Engine
+El software usado es totalmente gratuíto, ya que Unreal Engine está disponible
+ para cualquier persona a través de la Epic Store.
 \end_layout
 
 \begin_layout Section
@@ -723,14 +849,20 @@ Se programará el código en el entorno de programación Visual Studio.
 \end_layout
 
 \begin_layout Itemize
-Se usará también la programación por blueprints, qué es el metodo de programació
+Se usará también la programación por blueprints, qué es el método de programació
 n visual proporcionado por Unreal Engine, basado en un sistema de nodos
  y conexiones.
 \end_layout
 
 \begin_layout Itemize
 Las imágenes usadas estarán en formato PNG, para así poder trabajar con
- transparencias, con una alta calidad y una compresión sin pérdida
+ transparencias, con una alta calidad y una compresión sin pérdida.
+\end_layout
+
+\begin_layout Itemize
+Se usará, en su mayoría, recursos del propio motor gráfico y otros proporcionado
+s por la propia tienda de la plataforma Epic Games, siendo éstos recursos
+ de software libre y, al menos los que usaremos, disponibles de forma gratuíta.
 \end_layout
 
 \begin_layout Chapter
@@ -968,7 +1100,7 @@ Los requisitos funcionales determinan la función del proyecto.
 \end_layout
 
 \begin_layout Standard
-Estos requsitos se numerarán con las siglas RF (Requisitos Funcionales):
+Estos requsitos se numerarán con las siglas RF (Requisito Funcional):
 \end_layout
 
 \begin_layout Itemize
@@ -1029,8 +1161,8 @@ RF 6
 \series bold
 RF 7
 \series default
-: El usuario podrá decidir en cualquier momento si cerrar el proyecto, y
- éste deberá dar una opción apropiada para ello.
+: El usuario podrá interrumpir su partida en cualquier momento cerrando
+ el software, para lo cual existirá una opción en el menú de pausa.
 \end_layout
 
 \begin_layout Itemize
@@ -1057,7 +1189,8 @@ RF 9
 RF 10
 \series default
 : Los tests darán la oportunidad de errar en la respuesta sin ninguna consecuenc
-ia, además de dar la oportunidad de intentarlo todas las veces necesarias
+ia más allá de mostrar el error cometido, además de dar la oportunidad de
+ intentarlo todas las veces necesarias
 \end_layout
 
 \begin_layout Section
@@ -1072,8 +1205,8 @@ En este apartado se trataran los requisitos que no describen una funcionalidad
 \end_layout
 
 \begin_layout Standard
-Este tipo de requisitos son numerados con las siglas RNF (Requisitos No
- Funcionales):
+Este tipo de requisitos son numerados con las siglas RNF (Requisito No Funcional
+):
 \end_layout
 
 \begin_layout Itemize
@@ -1129,7 +1262,7 @@ RNF 5
 \series bold
 RNF 6
 \series default
-: El proyecto será consistente en cuanto a errores y funcionar correctamente
+: El proyecto será consistente y robusto a errores y funcionar correctamente
  en todo momento
 \end_layout
 
@@ -1230,7 +1363,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename C:/Users/Rafael Moreno/Downloads/Caso de Uso Diagrama-1.png
+	filename C:/Users/Rafael Moreno/Desktop/Diagrama de secuencia/Captura.PNG
 	width 100text%
 
 \end_inset
@@ -1242,7 +1375,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Contexto del Sistema
+Caso de uso: Contexto del Sistema
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Contexto-del-Sistema"
@@ -1268,7 +1401,7 @@ name "fig:Contexto-del-Sistema"
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="10" columns="2">
+<lyxtabular version="3" rows="11" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1347,376 +1480,8 @@ Casos de uso:
 
 \begin_layout Plain Layout
 CU-1.
- Comenzar: El usuario selecciona esta opción si quiere comenzar con el tutorial
- desde el principio
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.
- Cargar partida: El usuario selecciona esta opción si desea comenzar con
- el tutorial desde el punto que lo dejó
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-3.
- Opciones: El usuario selecciona esta opción si desea cambiar las opciones
- disponibles
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-4.
- Salir: El usuario selecciona esta opción si desea cerrar el programa
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Flujo principal:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.
- Se accede al programa desde el lanzador o un acceso directo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2.
- Se muestran las distintas elecciones del menú principal
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3.
- El usuario escoge alguna de las opciones disponibles
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Caso de uso 1: Pulsar botón explicativo
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename C:/Users/Rafael Moreno/Downloads/Boton.png
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Contexto del Sistema
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Contexto-del-Sistema-1"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-En la siguiente tabla se muestra información sobre el caso de uso de la
- figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Contexto-del-Sistema-1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="14" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Caso de Uso:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Caso de uso 1: Pulsar botón explicativo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ID:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Descripción:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Muestra al usuario una explicación correspondiente a una imagen u objeto
- que tenga delante
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Actores:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Personaje
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Casos de uso:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-1.1.
- Pulsar botón explicativo: El usuario se acerca a un botón explicativo e
- interactúa con él
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-1.2.
- Se desactiva el control del personaje: el usuario no podrá mover al personaje
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-1.3.
- Aparece el diálogo en pantalla: El diálogo que corresponda a ese botón
- aparece en la interfaz
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-1.4.
- Pasar diálogo: El usuario pulsa el botón de interactuar para mostrar la
- siguiente línea de diálogo
+ Pulsar botón explicativo: El usuario pulsa un botón para recibir una explicació
+n
 \end_layout
 
 \end_inset
@@ -1737,7 +1502,7 @@ CU-1.4.
 
 \begin_layout Plain Layout
 CU-1.5.
- Terminar diálogo: La interfaz de diálogo desaparece de la pantalla
+ Realizar test: El usuario pulsa un botón explicativo y comienza un test
 \end_layout
 
 \end_inset
@@ -1757,9 +1522,51 @@ CU-1.5.
 \begin_inset Text
 
 \begin_layout Plain Layout
-CU-1.6.
- Devuelve el control del personaje: El usuario de nuevo puede mover con
- libertad al personaje
+CU-3.
+ Agarrar objeto: El usuario coge un objeto para llevarlo consigo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CU-3.
+ Cambiar opciones de pantalla: El usuario cambia la resolución de la pantalla
+ o el modo de ventana
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CU-4.
+ Cargar partida: El usuario selecciona esta opción para cargar partida
 \end_layout
 
 \end_inset
@@ -1779,9 +1586,7 @@ Flujo principal:
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.
- El personaje interactúa con uno de los botones explicativos repartidos
- por el nivel
+
 \end_layout
 
 \end_inset
@@ -1801,29 +1606,7 @@ Flujo principal:
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.
- Aparece en pantalla el diálogo correspondiente a dicho botón
-\end_layout
 
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3.
- El usuario avanza por las distintas líneas de diálogo
 \end_layout
 
 \end_inset
@@ -1843,545 +1626,7 @@ Flujo principal:
 \begin_inset Text
 
 \begin_layout Plain Layout
-4.
- La explicación termina y desaparece de la pantalla
-\end_layout
 
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Caso de uso 2: Pulsar botón de test
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename C:/Users/Rafael Moreno/Downloads/Boton2.png
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Contexto del Sistema
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="23" columns="2">
-<features tabularvalignment="middle" tabularwidth="100text%">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="70col%">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Caso de Uso:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Caso de uso 2: Pulsar botón de test 1
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-ID:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Descripción:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Muestra al usuario una explicación correspondiente a una imagen u objeto
- que tenga delante
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Actores:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Personaje
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Casos de uso:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.1.
- Pulsar botón explicativo: El usuario se acerca a un botón explicativo e
- interactúa con él
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.2.
- Se desactiva el control del personaje: el usuario no podrá mover al personaje
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.3.
- Aparece el diálogo en pantalla: El diálogo que corresponda a ese botón
- aparece en la interfaz
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.4.
- Pasar diálogo: El usuario pulsa el botón de interactuar para mostrar la
- siguiente línea de diálogo
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.5.
- Comienza pregunta: Se detecta pregunta y se accede a la base de datos de
- preguntas
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.6.
- Mostrar respuestas a pregunta: Se muestra al usuario las distintas opciones
- de respuesta a la pregunta
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.7.
- Fallar pregunta: El jugador escoge una respuesta incorrecta
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.8.
- Repite pregunta: Vuelve a aparecer en pantalla la misma pregunta
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.9.
- Acertar pregunta: El jugador acierta la pregunta planteada
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.10.
- Siguiente pregunta: Otra pregunta diferente es mostrada en pantalla al
- usuario
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.11.
- Terminar test: La interfaz de diálogo desaparece de la pantalla
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-CU-2.12.
- Devuelve el control del personaje: El usuario de nuevo puede mover con
- libertad al personaje
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Flujo principal:
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.
- El personaje interactúa con el botón de test
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2.
- Aparece en pantalla el diálogo correspondiente a dicho botón
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3.
- El usuario avanza por las distintas líneas de diálogo antes del test
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4.
- Una pregunta se muestra con sus respectivas preguntas
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5.1.
- El jugador falla la pregunta y vuelve a mostrarse
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5.2.
- El jugador acierta la pregunta y se muestra la siguiente pregunta
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-6.
- La test termina y desaparece de la pantalla la interfaz de diálogo
 \end_layout
 
 \end_inset
@@ -2395,7 +1640,7 @@ Flujo principal:
 \end_layout
 
 \begin_layout Chapter
-Modelado dinámico
+Análisis dinámico
 \end_layout
 
 \begin_layout Standard
@@ -2409,7 +1654,7 @@ Diagramas de secuencia
 \end_layout
 
 \begin_layout Subsection
-Diagrama de secuencia de botón de test 1
+Diagrama de secuencia de botón explicativo
 \end_layout
 
 \begin_layout Standard
@@ -2432,7 +1677,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Contexto del Sistema
+Diagrama de secuencia de botón de explicativo
 \end_layout
 
 \end_inset
@@ -2783,7 +2028,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Trigger del nivel 1 para pasar a la siguiente zona 
+Aspecto de la primera zona del nivel 2 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Aspecto-de-la-4"
@@ -2852,7 +2097,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Trigger del nivel 1 para pasar a la siguiente zona 
+Aspecto de la segunda zona del nivel 2 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Aspecto-de-la-5"
@@ -2909,7 +2154,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Trigger del nivel 1 para pasar a la siguiente zona 
+Aspecto del test del nivel 2 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Aspecto-de-la-6"
@@ -2980,7 +2225,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Trigger del nivel 1 para pasar a la siguiente zona 
+Aspecto de la primera zona del nivel 3 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Aspecto-de-la-7"
@@ -3036,7 +2281,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Trigger del nivel 1 para pasar a la siguiente zona 
+Aspecto de la segunda zona del nivel 3 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Aspecto-de-la-8"
@@ -3102,7 +2347,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Trigger del nivel 1 para pasar a la siguiente zona 
+Aspecto de las opciones del test del nivel 3 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Aspecto-de-la-9"

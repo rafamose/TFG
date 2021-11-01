@@ -2019,6 +2019,67 @@ name "fig:MyGameInstance-GetAnswer2"
 \end_layout
 
 \begin_layout Section
+Blueprint MyHUD
+\end_layout
+
+\begin_layout Standard
+Este es el blueprint correspondiente al HUD, es decir, la información que
+ aparece en pantalla en todo momento.
+ En nuestro caso es únicamente una retícula, así que se ha realizado lo
+ que se muestra en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:MyHUD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/MyGameInstance/GetAnswer/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+MyHUD
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:MyHUD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Blueprint ButtonTest1
 \end_layout
 
