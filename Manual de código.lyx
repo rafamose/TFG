@@ -86,6 +86,14 @@
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Introducción
 \end_layout
@@ -2067,6 +2075,160 @@ name "fig:MyHUD"
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint ChangeImages
+\end_layout
+
+\begin_layout Standard
+Este blueprint se usa para cambiar las imágenes de las distintas opciones
+ del test del nivel 3.
+ Son tres opciones y cambia las imágenes en cada fase del test.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Canvas: 
+\series default
+El material al que se le cambiará la imagen.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Image1: 
+\series default
+Las imágenes que pertenecen al botón 1.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Image2: 
+\series default
+Las imágenes que pertenecen al botón 2.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Image3: 
+\series default
+Las imágenes que pertenecen al botón 3.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Images: 
+\series default
+Los 3 paneles a los que se le cambiarán la imagen.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Question: 
+\series default
+Identificador de la pregunta actual.
+\end_layout
+
+\begin_layout Subsection
+Evento Marcar
+\end_layout
+
+\begin_layout Subsubsection
+Detectar cambio de pregunta
+\end_layout
+
+\begin_layout Standard
+Se recoge el identificador de la pregunta actual y se detecta si es diferente
+ al identificador de pregunta de la imagen actual en las opciones,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ChangeImages/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ChangeImages Marcar1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Cambiar imágenes
+\end_layout
+
+\begin_layout Standard
+Se recorren los 3 paneles de las opciones, y se cambia la imagen de cada
+ uno, accediendo a su correspondiente array de imágenes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ChangeImages/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ChangeImages Marcar1
 \end_layout
 
 \end_inset

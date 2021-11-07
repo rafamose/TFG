@@ -93,38 +93,6 @@
 
 \begin_body
 
-\begin_layout Title
-Implementación de un tutorial interactivo de programación con Unreal Engine
- en forma de videojuego puzle en primera persona.
-\end_layout
-
-\begin_layout Author
-Rafael Moreno Serrano
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-blankpage
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
@@ -687,11 +655,26 @@ Origen de los videojuegos
 \end_layout
 
 \begin_layout Standard
-La considerada primera “máquina de juegos” es “NIMATRON”[2], una máquina
- electromecánica para jugar al juego matemático Nim.
+La considerada primera “máquina de juegos” es “NIMATRON”
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HistoryOf"
+literal "false"
+
+\end_inset
+
+, una máquina electromecánica para jugar al juego matemático Nim.
  Fue mostrada en la feria mundial de Nueva York en 1940 por el Dr.
  Edward Uhler Condon.
- Jugaron unas 50.000 personas en los 6 meses que estuvo exponiéndose[3].
+ Jugaron unas 50.000 personas en los 6 meses que estuvo exponiéndose
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NIMATRON"
+literal "false"
+
+\end_inset
+
+.
  La primera videoconsola tenía el nombre de “Magnavox Odyssey”.
  Anteriormente llamada “Brown Box”, fue lanzada como prototipo en 1967,
  y permitía controlar cubos que se movían por la pantalla.
@@ -711,7 +694,15 @@ Los primeros videojuegos 3D en primera persona fueron “Maze War”, diseñado
  El segundo se lanzó para el sistema educativo en red de la Universidad
  de Illinois (PLATO).
  El género no adquirió popularidad hasta “Wolfenstein 3D” (1992), y un año
- más tarde “Doom”, ambos creados por id Software y lanzados para PC [1].
+ más tarde “Doom”, ambos creados por id Software y lanzados para PC
+\begin_inset CommandInset citation
+LatexCommand cite
+key "FirstP"
+literal "false"
+
+\end_inset
+
+.
  El género se fue expandiendo a más especialidades además de disparos, siendo
  algunos ejemplos “MYST” (1991) como videojuego de puzle o “The Elder Scrolls:
  Arena” (1994) como videojuego de aventura rol.
@@ -731,14 +722,30 @@ Originalmente, no existían los motores de videojuegos.
  entre la parte lógica y la gráfica, así que las rutinas de dibujado debían
  ser implementadas desde cero.
  No fue hasta la década de los noventa cuando se comenzó a hablar del término
- “game engine”[4].
+ “game engine”
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MotoresPri"
+literal "false"
+
+\end_inset
+
+.
  “Doom” y “Quake” fueron dos videojuegos que alcanzaron una gran popularidad
  debido a que, en lugar de crear un videojuego desde cero, se licenciaba
  la parte esencial del mismo para usarlo como base y crear motores de juego
  3D llamados “id Tech 1” y “Quake Engine”, respectivamente.
  También se crearon motores en dos dimensiones como el famoso “RPG Tsukūru
  Dante 98” en 1992, el cual sigue siendo actualizado a día de hoy bajo el
- nombre de “RPG Maker”[6].
+ nombre de “RPG Maker”
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RPGMAKER"
+literal "false"
+
+\end_inset
+
+.
  En 1998, el estudio de videojuegos “Epic MegaGames” (actual “Epic Games”)
  lanza el videojuego “Unreal”, el cual presentó un nuevo motor gráfico con
  el mismo nombre.
@@ -749,7 +756,15 @@ Originalmente, no existían los motores de videojuegos.
 
 \begin_layout Standard
 Esa versión fue denominada como “Unreal Engine 1”, y entre sus características
- estaba la detección de colisión o el editor de niveles[7].
+ estaba la detección de colisión o el editor de niveles
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ThisUnreal"
+literal "false"
+
+\end_inset
+
+.
  Se crearon videojuegos de éxito como “X-COM: Enforcer” o el ya nombrado
  “Unreal”.
  La segunda versión se lanzó en 2002, e hizo su debut con “America’s Army”,
@@ -783,7 +798,15 @@ Unreal Engine
 
 \begin_layout Standard
 El motor que se va a usar se define a sí mismo como la plataforma más abierta
- y completa de creación de proyectos en 3D a tiempo real [8].
+ y completa de creación de proyectos en 3D a tiempo real
+\begin_inset CommandInset citation
+LatexCommand cite
+key "UnrealEngine"
+literal "false"
+
+\end_inset
+
+.
  Actualmente se encuentra en la versión 4.24.3., con una versión 4.25.
  ya en camino, y está en constante evolución con una excelente comunicación
  y transparencia con el usuario.
@@ -2296,7 +2319,7 @@ Actores:
 
 \end_inset
 </cell>
-<cell multirow="3" mroffset="1cm" alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell mroffset="1cm" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8461,8 +8484,7 @@ Futuras mejoras
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
-bibfiles "biblatex-examples"
-options "ieeetr"
+bibfiles "C:/Users/Rafael Moreno/Desktop/bibliografia"
 
 \end_inset
 
