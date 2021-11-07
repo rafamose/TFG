@@ -169,7 +169,18 @@ En este capítulo se mostrará cómo instalar el proyecto en tu equipo paso
 \end_layout
 
 \begin_layout Standard
-Una vez tengamos el instalador, al abrirno nos aparecerá la siguiente ventana:
+Una vez tengamos el instalador, al abrirno nos aparecerá la ventana de la
+ figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ventana-instalador"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -180,7 +191,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Capturas Instalacion TFG/Captura.PNG
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Instalacion TFG/Captura.PNG
 	width 100text%
 
 \end_inset
@@ -193,6 +204,13 @@ status open
 
 \begin_layout Plain Layout
 Ventana instalador
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ventana-instalador"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -223,7 +241,18 @@ Siguiente >
 \end_layout
 
 \begin_layout Standard
-Al hacerlo, nos aparecerá una nueva ventana, que será tal que así:
+Al hacerlo, nos aparecerá una nueva ventana, que tendrá la apariencia que
+ se observa en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ventana-carpeta-de"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -234,7 +263,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Capturas Instalacion TFG/Captura2.PNG
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Instalacion TFG/Captura2.PNG
 	width 100text%
 
 \end_inset
@@ -247,6 +276,13 @@ status open
 
 \begin_layout Plain Layout
 Ventana carpeta de instalación
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ventana-carpeta-de"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -307,7 +343,17 @@ Siguiente >
 \begin_layout Standard
 Por último, aparecerá otra ventana avisando de que se comenzará a instalar
  el programa en la ubicación señalada.
- Esta ventana será así:
+ Esta ventana será como en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ventana-comienzo-de"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -318,7 +364,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Capturas Instalacion TFG/Captura3.PNG
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Instalacion TFG/Captura3.PNG
 	width 100text%
 
 \end_inset
@@ -331,6 +377,13 @@ status open
 
 \begin_layout Plain Layout
 Ventana comienzo de instalación
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ventana-comienzo-de"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -386,8 +439,18 @@ n sea más clara.
 \end_layout
 
 \begin_layout Standard
-Nada más abrir el programa, aparecerá un menú principal que tendrá el siguiente
- aspecto:
+Nada más abrir el programa, aparecerá un menú principal que tendrá el aspecto
+ que se ve en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Aspecto-del-menú"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -398,7 +461,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Capturas Uso de TFG/Captura.PNG
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Uso de TFG/Captura.PNG
 	width 100text%
 
 \end_inset
@@ -410,7 +473,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Menú Principal
+Aspecto del menú principal
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Aspecto-del-menú"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -432,22 +502,37 @@ Las distintas elecciones que tenemos en el menú principal son las siguientes:
 \end_layout
 
 \begin_layout Itemize
-Comenzar: El tutorial comienza desde el principio, sin importar si tenemos
- partida guardada o no.
+
+\series bold
+Comenzar:
+\series default
+ El tutorial comienza desde el principio, sin importar si tenemos partida
+ guardada o no.
 \end_layout
 
 \begin_layout Itemize
-Cargar Partida: Cargamos la partida, en el caso de que ya hayamos comenzado
- una anteriormente.
+
+\series bold
+Cargar Partida: 
+\series default
+Cargamos la partida, en el caso de que ya hayamos comenzado una anteriormente.
 \end_layout
 
 \begin_layout Itemize
-Opciones de pantalla: Podemos cambiar el tamaño de la ventana, así como
- elegir la opción de pantalla completa.
+
+\series bold
+Opciones de pantalla: 
+\series default
+Podemos cambiar el tamaño de la ventana, así como elegir la opción de pantalla
+ completa.
 \end_layout
 
 \begin_layout Itemize
-Salir: El programa se cerrará.
+
+\series bold
+Salir: 
+\series default
+El programa se cerrará.
 \end_layout
 
 \begin_layout Section
@@ -455,7 +540,17 @@ Opciones de pantalla
 \end_layout
 
 \begin_layout Standard
-La pantalla de opciones es la siguiente:
+La pantalla de opciones es la que se ve en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Menú-de-opciones"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -466,7 +561,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Capturas Uso de TFG/Captura2.PNG
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Uso de TFG/Captura2.PNG
 	width 100text%
 
 \end_inset
@@ -478,7 +573,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Menú de opciones de Pantalla
+Aspecto del menú de opciones de pantalla
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Menú-de-opciones"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -559,7 +661,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Capturas Uso de TFG/Captura3.PNG
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Uso de TFG/Captura3.PNG
 	width 100text%
 
 \end_inset
@@ -629,6 +731,16 @@ uninstal.exe
 \begin_inset Quotes frd
 \end_inset
 
+, como se puede ver en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Carpeta-de-instalación"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
 .
 \end_layout
 
@@ -640,7 +752,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Capturas Instalacion TFG/Captura4.PNG
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Instalacion TFG/Captura4.PNG
 	width 100text%
 
 \end_inset
@@ -653,6 +765,13 @@ status open
 
 \begin_layout Plain Layout
 Carpeta de instalación
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Carpeta-de-instalación"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -666,7 +785,17 @@ Carpeta de instalación
 \end_layout
 
 \begin_layout Standard
-Al ejecutarlo aparecerá la siguiente ventana:
+Al ejecutarlo aparecerá la ventana que aparece en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Desinstalador"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -677,7 +806,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Capturas Instalacion TFG/Captura5.PNG
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Instalacion TFG/Captura5.PNG
 	width 100text%
 
 \end_inset
@@ -690,6 +819,13 @@ status open
 
 \begin_layout Plain Layout
 Desinstalador
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Desinstalador"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -715,7 +851,28 @@ Aceptar
 \end_layout
 
 \begin_layout Standard
-aaa
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+afterpage{
+\backslash
+blankpage}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
