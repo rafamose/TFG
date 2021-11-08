@@ -94,14 +94,7 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Informe de directores de proyecto.
 \end_layout
 
 \begin_layout Standard
@@ -655,9 +648,10 @@ Origen de los videojuegos
 \end_layout
 
 \begin_layout Standard
-La considerada primera “máquina de juegos” es “NIMATRON”
+La considerada primera “máquina de juegos” es “NIMATRON” 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citeauthor
+before "[2]"
 key "HistoryOf"
 literal "false"
 
@@ -666,16 +660,21 @@ literal "false"
 , una máquina electromecánica para jugar al juego matemático Nim.
  Fue mostrada en la feria mundial de Nueva York en 1940 por el Dr.
  Edward Uhler Condon.
- Jugaron unas 50.000 personas en los 6 meses que estuvo exponiéndose
+ Jugaron unas 50.000 personas en los 6 meses que estuvo exponiéndose 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citeauthor
+before "[3]"
 key "NIMATRON"
 literal "false"
 
 \end_inset
 
 .
- La primera videoconsola tenía el nombre de “Magnavox Odyssey”.
+ 
+\end_layout
+
+\begin_layout Standard
+La primera videoconsola tenía el nombre de “Magnavox Odyssey”.
  Anteriormente llamada “Brown Box”, fue lanzada como prototipo en 1967,
  y permitía controlar cubos que se movían por la pantalla.
  Se podían programar juegos como el ping pong.
@@ -694,16 +693,21 @@ Los primeros videojuegos 3D en primera persona fueron “Maze War”, diseñado
  El segundo se lanzó para el sistema educativo en red de la Universidad
  de Illinois (PLATO).
  El género no adquirió popularidad hasta “Wolfenstein 3D” (1992), y un año
- más tarde “Doom”, ambos creados por id Software y lanzados para PC
+ más tarde “Doom”, ambos creados por id Software y lanzados para PC 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citeauthor
+before "[1]"
 key "FirstP"
 literal "false"
 
 \end_inset
 
 .
- El género se fue expandiendo a más especialidades además de disparos, siendo
+ 
+\end_layout
+
+\begin_layout Standard
+El género se fue expandiendo a más especialidades además de disparos, siendo
  algunos ejemplos “MYST” (1991) como videojuego de puzle o “The Elder Scrolls:
  Arena” (1994) como videojuego de aventura rol.
  Este proyecto será de tipo puzle, el cual alcanzó una fama enorme con el
@@ -721,10 +725,15 @@ Originalmente, no existían los motores de videojuegos.
  Estos eran desarrollados como una única entidad, es decir, no había separación
  entre la parte lógica y la gráfica, así que las rutinas de dibujado debían
  ser implementadas desde cero.
- No fue hasta la década de los noventa cuando se comenzó a hablar del término
+ 
+\end_layout
+
+\begin_layout Standard
+No fue hasta la década de los noventa cuando se comenzó a hablar del término
  “game engine”
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citeauthor
+before "[4]"
 key "MotoresPri"
 literal "false"
 
@@ -739,14 +748,19 @@ literal "false"
  Dante 98” en 1992, el cual sigue siendo actualizado a día de hoy bajo el
  nombre de “RPG Maker”
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citeauthor
+before "[5]"
 key "RPGMAKER"
 literal "false"
 
 \end_inset
 
 .
- En 1998, el estudio de videojuegos “Epic MegaGames” (actual “Epic Games”)
+ 
+\end_layout
+
+\begin_layout Standard
+En 1998, el estudio de videojuegos “Epic MegaGames” (actual “Epic Games”)
  lanza el videojuego “Unreal”, el cual presentó un nuevo motor gráfico con
  el mismo nombre.
  Este motor adquirió tanto éxito que ganó por mucho en popularidad a “id
@@ -758,7 +772,8 @@ literal "false"
 Esa versión fue denominada como “Unreal Engine 1”, y entre sus características
  estaba la detección de colisión o el editor de niveles
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citeauthor
+before "[6]"
 key "ThisUnreal"
 literal "false"
 
@@ -767,13 +782,20 @@ literal "false"
 .
  Se crearon videojuegos de éxito como “X-COM: Enforcer” o el ya nombrado
  “Unreal”.
- La segunda versión se lanzó en 2002, e hizo su debut con “America’s Army”,
+\end_layout
+
+\begin_layout Standard
+La segunda versión se lanzó en 2002, e hizo su debut con “America’s Army”,
  un shooter desarrollado con la intención de servir como prueba de reclutamiento
  para la armada estadounidense.
  Esta versión es capaz de crear niveles mucho más detallados y tenía un
  sistema de animación de esqueleto y físicas mejoradas.
  “Bioshock 1” o “Lineage II” usaban este motor.
- En 2004 se publicó Unreal Engine 3, siendo utilizado por primera vez por
+ 
+\end_layout
+
+\begin_layout Standard
+En 2004 se publicó Unreal Engine 3, siendo utilizado por primera vez por
  el videojuego “Gears of War”.
  A pesar de que en lo visible para el jugador era todo drásticamente nuevo
  y con más potencial, el aspecto técnico no cambió mucho, excepto que el
@@ -781,7 +803,11 @@ literal "false"
  Soportaba una gran cantidad de plataformas como Windows, Playstation 3,
  Xbox 360, Android o iOS.
  “Borderlands”, “Mass Effect” o “Rocket League” usan este motor.
- Hubo que esperar hasta 2012 para que se publicase la actual versión, “Unreal
+ 
+\end_layout
+
+\begin_layout Standard
+Hubo que esperar hasta 2012 para que se publicase la actual versión, “Unreal
  Engine 4”.
  Fue un cambio muy importante, ya que un par de años después de su lanzamiento,
  fue lanzado gratuitamente para todo el mundo, incluyendo todo el código
@@ -800,7 +826,8 @@ Unreal Engine
 El motor que se va a usar se define a sí mismo como la plataforma más abierta
  y completa de creación de proyectos en 3D a tiempo real
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citeauthor
+before "[7]"
 key "UnrealEngine"
 literal "false"
 
@@ -810,7 +837,11 @@ literal "false"
  Actualmente se encuentra en la versión 4.24.3., con una versión 4.25.
  ya en camino, y está en constante evolución con una excelente comunicación
  y transparencia con el usuario.
- El motor consiste en una interfaz gráfica de total modificación para adaptarse
+ 
+\end_layout
+
+\begin_layout Standard
+El motor consiste en una interfaz gráfica de total modificación para adaptarse
  a las necesidades personales.
  Tiene integradas herramientas de todo tipo para mayor rapidez y simpleza,
  entre ellas herramientas de animación, de modelaje, sonido, iluminación,
@@ -8382,13 +8413,12 @@ blankpage}
 \end_layout
 
 \begin_layout Chapter
-Conclusiones y futuras mejoras
+Conclusiones
 \end_layout
 
 \begin_layout Standard
 En este apartado se expondrán las conclusiones que se han obtenido a lo
- largo de la realización de este proyecto, así como las futuas mejoras a
- las que está abierto el mismo si así fuese necesario.
+ largo de la realización de este proyecto.
 \end_layout
 
 \begin_layout Section
@@ -8472,11 +8502,35 @@ Se ha elaborado la documentación, dividida en memoria técnica, manual de
  La documentación es completa y define perfectamente el proyecto.
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Futuras mejoras
 \end_layout
 
 \begin_layout Standard
+Además de los objetivos que se han planteado para este proyecto, se han
+ encontrado nuevas ideas con las que, en un futuro, poder ampliarlo y mejorarlo.
+ Estas son:
+\end_layout
+
+\begin_layout Itemize
+Otro nivel para términos matemáticos que se aplican en Unreal Engine.
+\end_layout
+
+\begin_layout Itemize
+Mejorar el apartado visual del tutorial.
+\end_layout
+
+\begin_layout Itemize
+Poder tener varias partidas guardadas, con nombre modificable por el usuario.
+\end_layout
+
+\begin_layout Itemize
+Desarrollar más opciones modificables en el menú además de las opciones
+ de pantalla ya implementadas.
+\end_layout
+
+\begin_layout Standard
+\align block
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
