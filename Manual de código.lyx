@@ -12,6 +12,13 @@
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -85,6 +92,33 @@
 \end_header
 
 \begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+afterpage{
+\backslash
+blankpage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Standard
 \begin_inset FloatList figure
@@ -2088,6 +2122,443 @@ name "fig:MyHUD"
 \end_layout
 
 \begin_layout Section
+Blueprint Abrirpuerta
+\end_layout
+
+\begin_layout Standard
+Este blueprint se usa para abrir una puerta una vez se hayan leído todas
+ las explicaciones de la sala.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Puerta: 
+\series default
+La puerta que se va a abrir.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+BotonesPulsados: 
+\series default
+Número de botones que ya han sido pulsados.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+BotonesTotales: 
+\series default
+Número total de botones necesarios para abrir la puerta.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+PuertaAbierta: 
+\series default
+Indica si la puerta ha sido abierta
+\end_layout
+
+\begin_layout Subsection
+Evento Marcar
+\end_layout
+
+\begin_layout Standard
+Cuando los botones pulsados sean igual a los botones totales, la puerta
+ se abre.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/AbrirPuerta/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+AbrirPuerta Marcar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint GuardarPartida
+\end_layout
+
+\begin_layout Standard
+Este blueprint se usa para guardar partida cuando el jugador pasa por una
+ zona de autoguardado.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+SaveTriggers:
+\series default
+ Array de triggers que actúan como zona de autoguardado.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+IsIn: 
+\series default
+Indica si el jugador está dentro de una zona o no.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LastSaved:
+\series default
+ Guarda el último autoguardado que se ha activado.
+\end_layout
+
+\begin_layout Subsection
+Evento Marcar
+\end_layout
+
+\begin_layout Standard
+En cada tick, recorre el array de triggers que activan el autoguardado,
+ y detecta si el jugador acaba de entrar en ella.
+ Si no es la misma zona que el último autoguardado, se llama a la función
+ programada en C++ y se guarda la partida.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/GuardarPartida/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GuardarPartida Marcar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint Level3finished
+\end_layout
+
+\begin_layout Standard
+Este blueprint indica si se ha terminado el test del nivel 3.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Finalizado:
+\series default
+ Indica si el test ha sido finalizado o no.
+\end_layout
+
+\begin_layout Subsection
+Evento Marcar
+\end_layout
+
+\begin_layout Standard
+Detecta si se ha pasado a través de todas las preguntas del test, y lo guarda
+ en una variable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/Level3/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Level3finished Marcar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint ChangeLevel
+\end_layout
+
+\begin_layout Standard
+Este blueprint sirve para cambiar de nivel a través de un portal si se cumplen
+ las condiciones necesarias.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Trigger: 
+\series default
+Portal que transportará al siguiente nivel.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Level:
+\series default
+ Nombre del siguiente nivel.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+NextLevelLocation: 
+\series default
+Posición del nivel en la que aparecerá el personaje.
+\end_layout
+
+\begin_layout Subsection
+Evento superposición con trigger
+\end_layout
+
+\begin_layout Subsubsection
+Detectar condiciones y fundido a negro
+\end_layout
+
+\begin_layout Standard
+Se busca en la variable de nivel si se cumplen las condiciones para cambiar
+ de nivel.
+ Si es así, se hace fundido a negro de la cámara.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ChangeLevel/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ChangeLevel Superposicion1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Cambiar nivel
+\end_layout
+
+\begin_layout Standard
+Se transporta al siguiente nivel y a la posición correspondiente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ChangeLevel/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ChangeLevel Superposicion2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint ActorVariableLevel0
+\end_layout
+
+\begin_layout Standard
+Este blueprint sirve para guardar las variables de nivel a la que accederán
+ el resto de blueprints.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+IsWidget: 
+\series default
+indica si hay un widget activo en la pantalla o no.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+NRespuesta: 
+\series default
+indica el identificador de la respuesta que se ha escogido en un test.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+WidgetOn:
+\series default
+ guarda el widget que se encuentra activo en este momento.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+PrimeraVez:
+\series default
+ indica si es la primera vez que se aparece en un nivel.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+ChangeLevel: 
+\series default
+indica si se cumplen las condiciones necesarias para pasar al siguiente
+ nivel.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+AparecerTrigger: 
+\series default
+indica si debe aparecer el trigger de la cámara del nivel 1.
+\end_layout
+
+\begin_layout Section
 Blueprint ChangeImages
 \end_layout
 
@@ -2228,7 +2699,911 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-ChangeImages Marcar1
+ChangeImages Marcar2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint FirstPersonCharacter
+\end_layout
+
+\begin_layout Standard
+Este es el blueprint correspondiente al personaje que controla el usuario.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+PauseMenuReference:
+\series default
+ Guarda una referencia al widget de pausa.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+IsWidgetActive: 
+\series default
+bool que indica si hay un widget en pantalla o no.
+\end_layout
+
+\begin_layout Subsection
+Evento Marcar
+\end_layout
+
+\begin_layout Standard
+Este evento se activa en cada tick.
+ Busca en la variable de nivel si hay un widget en pantalla.
+ En caso positivo, cambia el modo de juego para poder usar la interfaz de
+ la pantalla.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/FirstPersonCharacter/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FirstPersonCharacter Marcar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Evento Jump
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el usuario pulsa la tecla correspondiente de
+ saltar y hace que el personaje salte.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/FirstPersonCharacter/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FirstPersonCharacter Jump
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Evento MoveFoward
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el usuario pulsa la tecla correspondiente de
+ andar hacia delante o la de hacia detrás y hace que el personaje se mueva
+ debidamente.
+ Al pulsar la tecla de moverse hacia detrás, el input es negativo directamente,
+ por eso es la misma función.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/FirstPersonCharacter/4.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FirstPersonCharacter MoveFoward
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Evento MoveRight
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el usuario pulsa la tecla correspondiente de
+ andar hacia la derecha o la de hacia la izquierda y hace que el personaje
+ se mueva debidamente.
+ Al pulsar la tecla de moverse hacia la izquierda, el input es negativo
+ directamente, por eso es la misma función.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/FirstPersonCharacter/3.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FirstPersonCharacter MoveRight
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Evento LookUp
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el usuario mueve el ratón hacia arriba o hacia
+ abajo y hace que el personaje mire donde el usuario desea.
+ Al mover el ratón hacia abajo, el input es negativo directamente, por eso
+ es la misma función.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/FirstPersonCharacter/5.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FirstPersonCharacter LookUp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Evento Turn
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el usuario mueve el ratón hacia la derecha
+ o hacia la izquierda y hace que el personaje se gire hacia donde el usuario
+ desea.
+ Al mover el ratón hacia la izquierda, el input es negativo directamente,
+ por eso es la misma función.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/FirstPersonCharacter/6.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FirstPersonCharacter LookUp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Evento Interact
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el usuario pulsa el botón de interactuar.
+ Detecta todos los actores con los que se puede interactuar, y si hay alguno
+ junto al personaje, activa su evento correspondiente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/FirstPersonCharacter/7.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FirstPersonCharacter Interact
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Evento P
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el usuario pulsa la tecla P, que es la correspondie
+nte a abrir el menú de pausa.
+ Se crea el menú, se añade a la pantalla y se pausa el tutorial.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/FirstPersonCharacter/8.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FirstPersonCharacter P
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint Button
+\end_layout
+
+\begin_layout Standard
+Este es el blueprint de todos los botones explicativos.
+ Al interactuar con él aparecerá en pantalla un diálogo con una explicación
+ de un concepto de Unreal Engine.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+NPC_ID
+\series default
+: determina el identificador del actor
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conversation_ID
+\series default
+: determina el identificador de la conversación, que cambia al pasar correctamen
+te todo el test.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LineCurrent
+\series default
+: determina el identificador de la línea de diálogo actual que se muestra
+ en pantalla.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+MyDialogue
+\series default
+: recoge todas las líneas de diálogo correspondientes al actor.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+DialogueWidget
+\series default
+: la interfaz de diálogo que aparece en pantalla en las líneas de diálogo
+ sin test.
+\end_layout
+
+\begin_layout Subsection
+Evento BeginPlay
+\end_layout
+
+\begin_layout Standard
+Se guardan todas las líneas de diálogo correspondientes al botón.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/Button/Captura.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Button BeginPlay
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Evento Interact
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el personaje interactúa con el actor con la
+ tecla correspondiente.
+\end_layout
+
+\begin_layout Subsubsection
+Widget Activo
+\end_layout
+
+\begin_layout Standard
+Se indica que hay un widget en pantalla y se ajusta la línea de diálogo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/Button/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Button Interact1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Ajustar Widget
+\end_layout
+
+\begin_layout Standard
+Se ajusta en la pantalla el widget de diálogo si no estaba ajustado de antes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/Button/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Button Interact2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Recoger líneas de diálogo
+\end_layout
+
+\begin_layout Standard
+Se recoge la línea de diálogo correspondiente y se muestra en pantalla.
+ Si es la última línea, se elimina el widget de la pantalla.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/Button/4.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Button Interact3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Botón pulsado
+\end_layout
+
+\begin_layout Standard
+Se indica que el botón ha sido pulsado y se añade una unidad al número de
+ botones pulsados del nivel.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/Button/3.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Button Interact4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint ButtonTrigger
+\end_layout
+
+\begin_layout Standard
+Este es el blueprint de todos los botones explicativos.
+ Al interactuar con él aparecerá en pantalla un diálogo con una explicación
+ de un concepto de Unreal Engine.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+NPC_ID
+\series default
+: determina el identificador del actor
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conversation_ID
+\series default
+: determina el identificador de la conversación, que cambia al pasar correctamen
+te todo el test.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LineCurrent
+\series default
+: determina el identificador de la línea de diálogo actual que se muestra
+ en pantalla.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+MyDialogue
+\series default
+: recoge todas las líneas de diálogo correspondientes al actor.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+DialogueWidget
+\series default
+: la interfaz de diálogo que aparece en pantalla en las líneas de diálogo
+ sin test.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+ConeVisible: 
+\series default
+El cono del trigger de la cámara
+\end_layout
+
+\begin_layout Subsection
+Evento BeginPlay
+\end_layout
+
+\begin_layout Standard
+Se guardan todas las líneas de diálogo correspondientes a este test.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ButtonTrigger/Captura.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTrigger BeginPlay
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Interact
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el personaje interactúa con el actor con la
+ tecla correspondiente.
+\end_layout
+
+\begin_layout Subsubsection
+Cono visible
+\end_layout
+
+\begin_layout Standard
+Si se encuentra en la línea de diálogo correspondiente, hace visible el
+ cono correspondiente al trigger de la cámara.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ButtonTrigger/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTrigger Interact
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Ajustar Widget
+\end_layout
+
+\begin_layout Standard
+Se ajusta en la pantalla el widget de diálogo si no estaba ajustado de antes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ButtonTrigger/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTrigger Interact2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Recoger líneas de diálogo
+\end_layout
+
+\begin_layout Standard
+Se recoge la línea de diálogo correspondiente y se muestra en pantalla.
+ Si es la última línea, se elimina el widget de la pantalla.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ButtonTrigger/3.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTrigger Interact3
 \end_layout
 
 \end_inset
@@ -2745,8 +4120,1457 @@ name "fig:ButtonTest1-Interact-4"
 
 \end_layout
 
+\begin_layout Subsubsection
+Quitar diálogo y restaurar cámara
+\end_layout
+
 \begin_layout Standard
-aaaaaaaa
+Al terminar el test, quita el diálogo de la pantalla e indica que ya no
+ hay ningún widget.
+ Luego, cambia a la siguiente conversación.
+ Por último, vuelve la cámara al personaje.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCButton1/Interact/5.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Mover esfera
+\end_layout
+
+\begin_layout Standard
+Por último, también al terminar el test, acerca la esfera que se usa para
+ cambiar al siguiente nivel al jugador.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCButton1/Interact/6.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 6
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Cambiar diálogo respuesta
+\end_layout
+
+\begin_layout Standard
+Si ha sido una pregunta, detecta la respuesta elegida y cambia al diálogo
+ correspondiente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCButton1/Interact/7.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 7
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Ajustar opciones widget
+\end_layout
+
+\begin_layout Standard
+Se recogen las distintas respuestas y se ajustan a los botones del widget.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCButton1/Interact/9.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Esperar respuesta
+\end_layout
+
+\begin_layout Standard
+Se da control del cursor al usuario y se espera a que se elija una respuesta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCButton1/Interact/10.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 9
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Detectar respuesta
+\end_layout
+
+\begin_layout Standard
+Se detecta cual es la respuesta escogida y se guarda en su respectiva variable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCButton1/Interact/11.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 10
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Visibilidad esferas
+\end_layout
+
+\begin_layout Standard
+Muestra muchas esferas en el caso de que se haya escogido la respuesta TickCompo
+nent en la primera pregunta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCButton1/Interact/12.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 11
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Quitar visibilidad esferas
+\end_layout
+
+\begin_layout Standard
+Vuelve a esconder las esferas en el caso de que se haya escogido la respuesta
+ TickComponent en la primera pregunta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCButton1/Interact/8.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 12
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Mostrar esfera mágica
+\end_layout
+
+\begin_layout Standard
+Al comienzo del test hace visible la esfera.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/NPCButton1/Interact/13.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest1 Interact 13
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint ButtonTest2
+\end_layout
+
+\begin_layout Standard
+Este es el blueprint relativo al segundo test, perteneciente al nivel 3.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+NPC_ID:
+\series default
+ Identificador del botón del test.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conversation_ID:
+\series default
+ Identificador de la conversación actual.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LineCurrent: 
+\series default
+Identificador de la línea de diálogo actual.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+MyDialogue:
+\series default
+ líneas de diálogos correspondientes al botón.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+DialogueWidget: 
+\series default
+widget del diálogo que se muestra en persona.
+\end_layout
+
+\begin_layout Subsection
+Evento BeginPlay
+\end_layout
+
+\begin_layout Standard
+Se guardan todas las líneas de diálogo correspondientes a este test.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ButtonTest2/Captura.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest2 BeginPlay
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Evento Interact
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el personaje interactúa con el actor con la
+ tecla correspondiente.
+\end_layout
+
+\begin_layout Subsubsection
+Widget Activo
+\end_layout
+
+\begin_layout Standard
+Se indica que hay un widget en pantalla y se ajusta la línea de diálogo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ButtonTest2/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest2 Interact1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Ajustar Widget
+\end_layout
+
+\begin_layout Standard
+Se ajusta en la pantalla el widget de diálogo si no estaba ajustado de antes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ButtonTest2/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest2 Interact2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Recoger líneas de diálogo
+\end_layout
+
+\begin_layout Standard
+Se recoge la línea de diálogo correspondiente y se muestra en pantalla.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ButtonTest2/3.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest2 Interact3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Desactivar Widget
+\end_layout
+
+\begin_layout Standard
+Cuando se llega a la última línea de diálogo, se elimina el widget de diálogo
+ y se indica que comienza el test.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/ButtonTest2/4.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ButtonTest2 Interact4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint BotonesTest1
+\end_layout
+
+\begin_layout Standard
+Este blueprint corresponde al primero de los botones de opciones del test
+ del nivel 3.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+NPC_ID:
+\series default
+ Identificador del botón del test.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conversation_ID:
+\series default
+ Identificador de la conversación actual.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LineCurrent: 
+\series default
+Identificador de la línea de diálogo actual.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+MyDialogue:
+\series default
+ líneas de diálogos correspondientes al botón.
+\end_layout
+
+\begin_layout Subsection
+Evento BeginPlay
+\end_layout
+
+\begin_layout Standard
+Se guardan todas las líneas de diálogo correspondientes a este botón.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest1/Captura.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest1 BeginPlay
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Evento Interact
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el personaje interactúa con el actor con la
+ tecla correspondiente.
+\end_layout
+
+\begin_layout Subsubsection
+Recoger identificador de pregunta
+\end_layout
+
+\begin_layout Standard
+Accede a las variables de nivel para saber en qué pregunta se encuentra
+ actualmente el test.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest1/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest1 Interact1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta a primera pregunta
+\end_layout
+
+\begin_layout Standard
+Al ser la respuesta correcta a la primera pregunta, muestra el diálogo correspon
+diente y, al terminar, avanza a la siguiente pregunta del test, accediendo
+ a las variables de nivel.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest1/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest1 Interact2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta a segunda pregunta
+\end_layout
+
+\begin_layout Standard
+Al ser una respuesta incorrecta a la primera pregunta, muestra el diálogo
+ correspondiente y, al terminar, vuelve el valor de la línea actual al comienzo..
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest1/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest1 Interact3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta a tercera pregunta
+\end_layout
+
+\begin_layout Standard
+Al ser una de las respuestas correctas a la tercera pregunta, muestra el
+ diálogo correspondiente y, al terminar, indica que se ha acabado el test,
+ accediendo a las variables de nivel.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest1/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest1 Interact4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint BotonesTest1
+\end_layout
+
+\begin_layout Standard
+Este blueprint corresponde al segundo de los botones de opciones del test
+ del nivel 3.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+NPC_ID:
+\series default
+ Identificador del botón del test.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conversation_ID:
+\series default
+ Identificador de la conversación actual.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LineCurrent: 
+\series default
+Identificador de la línea de diálogo actual.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+MyDialogue:
+\series default
+ líneas de diálogos correspondientes al botón.
+\end_layout
+
+\begin_layout Subsection
+Evento BeginPlay
+\end_layout
+
+\begin_layout Standard
+Se guardan todas las líneas de diálogo correspondientes a este botón.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest2/Captura.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest2 BeginPlay
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Evento Interact
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el personaje interactúa con el actor con la
+ tecla correspondiente.
+\end_layout
+
+\begin_layout Subsubsection
+Recoger identificador de pregunta
+\end_layout
+
+\begin_layout Standard
+Accede a las variables de nivel para saber en qué pregunta se encuentra
+ actualmente el test.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest2/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest2 Interact1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta a primera pregunta
+\end_layout
+
+\begin_layout Standard
+Al ser una respuesta incorrecta a la primera pregunta, muestra el diálogo
+ correspondiente y, al terminar, vuelve el valor de la línea actual al comienzo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest2/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest2 Interact2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta a segunda pregunta
+\end_layout
+
+\begin_layout Standard
+Al ser una respuesta incorrecta a la segunda pregunta, muestra el diálogo
+ correspondiente y, al terminar, vuelve el valor de la línea actual al comienzo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest2/3.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest2 Interact3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta a tercera pregunta
+\end_layout
+
+\begin_layout Standard
+Al ser una de las respuestas correctas a la tercera pregunta, muestra el
+ diálogo correspondiente y, al terminar, indica que se ha acabado el test,
+ accediendo a las variables de nivel.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest2/4.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest2 Interact4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Blueprint BotonesTest1
+\end_layout
+
+\begin_layout Standard
+Este blueprint corresponde al tercero de los botones de opciones del test
+ del nivel 3.
+\end_layout
+
+\begin_layout Subsection
+Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este blueprint son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+NPC_ID:
+\series default
+ Identificador del botón del test.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conversation_ID:
+\series default
+ Identificador de la conversación actual.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+LineCurrent: 
+\series default
+Identificador de la línea de diálogo actual.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+MyDialogue:
+\series default
+ líneas de diálogos correspondientes al botón.
+\end_layout
+
+\begin_layout Subsection
+Evento BeginPlay
+\end_layout
+
+\begin_layout Standard
+Se guardan todas las líneas de diálogo correspondientes a este botón.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest3/Captura.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest3 BeginPlay
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Evento Interact
+\end_layout
+
+\begin_layout Standard
+Este evento se activa cuando el personaje interactúa con el actor con la
+ tecla correspondiente.
+\end_layout
+
+\begin_layout Subsubsection
+Recoger identificador de pregunta
+\end_layout
+
+\begin_layout Standard
+Accede a las variables de nivel para saber en qué pregunta se encuentra
+ actualmente el test.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest3/1.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest3 Interact1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta a primera pregunta
+\end_layout
+
+\begin_layout Standard
+Al ser una respuesta incorrecta a la primera pregunta, muestra el diálogo
+ correspondiente y, al terminar, vuelve el valor de la línea actual al comienzo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest3/2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest1 Interact2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta a segunda pregunta
+\end_layout
+
+\begin_layout Standard
+Al ser la respuesta correcta a la segunda pregunta, muestra el diálogo correspon
+diente y, al terminar, avanza a la siguiente pregunta del test, accediendo
+ a las variables de nivel.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest3/3.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest3 Interact3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta a tercera pregunta
+\end_layout
+
+\begin_layout Standard
+Al ser una de las respuestas correctas a la tercera pregunta, muestra el
+ diálogo correspondiente y, al terminar, indica que se ha acabado el test,
+ accediendo a las variables de nivel.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Blueprint/BotonesTest3/4.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+BotonesTest3 Interact4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

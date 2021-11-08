@@ -58,10 +58,10 @@
 \use_package stmaryrd 1
 \use_package undertilde 1
 \cite_engine biblatex
-\cite_engine_type authoryear
-\biblio_style plain
-\biblatex_bibstyle authoryear
-\biblatex_citestyle authoryear
+\cite_engine_type numerical
+\biblio_style jurabib
+\biblatex_bibstyle numeric
+\biblatex_citestyle numeric
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -92,10 +92,6 @@
 \end_header
 
 \begin_body
-
-\begin_layout Standard
-
-\end_layout
 
 \begin_layout Standard
 \begin_inset Newpage pagebreak
@@ -8535,13 +8531,10 @@ Desarrollar más opciones modificables en el menú además de las opciones
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "C:/Users/Rafael Moreno/Desktop/bibliografia"
+options "bibtotoc"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 
