@@ -1,0 +1,914 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage{afterpage}
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introducción
+\end_layout
+
+\begin_layout Standard
+En cualquier programa o aplicación, se debe dar a conocer al usuario cómo
+ se usa de manera correcta.
+ Para ello, en esta guía se explicará con detalle cómo se usa el programa
+ que nos concierne.
+ De esta forma, se evita problemas para el usuario y se permite disfrutar
+ y sacar el máximo provecho.
+\end_layout
+
+\begin_layout Standard
+Esta guía está dividida en cuatro capítulos.
+ En el primero de ellos se listarán los requisitos del sistema, tanto hardware
+ como software, para poder ejecutar correctamente el programa.
+ En el siguiente capítulo se explicará paso a paso, y con capturas que faciliten
+ la explicación, el proceso de instalación del programa.
+ En el tercer capítulo se desarrollará sobre el uso del programa, explicando
+ cómo moverse dentro del mismo y cómo hacer uso de cada una de sus funcionalidad
+es.
+ Por último se explicará con detalle la desinstalación del programa.
+\end_layout
+
+\begin_layout Chapter
+\noindent
+Requisitos del sistema
+\end_layout
+
+\begin_layout Standard
+A continuación se van a exponer de forma clara y concisa los requisitos
+ necesarios a la hora de instalar y ejecutar la aplicación.
+ Se tratará por separado los requisitos hardware y los requisitos software.
+ Se tratará únicamente de los requisitos mínimos para que la aplicación
+ pueda ser ejecutada de manera correcta y sin problema.
+\end_layout
+
+\begin_layout Section
+Requisitos hardware
+\end_layout
+
+\begin_layout Standard
+Los requisitos de hardware mínimos serán los siguientes:
+\end_layout
+
+\begin_layout Itemize
+Sistema operativo Windows 7 o superior
+\end_layout
+
+\begin_layout Itemize
+2 GB de RAM
+\end_layout
+
+\begin_layout Itemize
+1 GB de almacenamiento disponible
+\end_layout
+
+\begin_layout Itemize
+Procesador: Quad-core Intel o AMD, 2.5 GHz o más
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Requisitos software
+\end_layout
+
+\begin_layout Standard
+Los requisitos de software para la ejecución del proyecto son los siguientes:
+\end_layout
+
+\begin_layout Itemize
+DirectX 11
+\end_layout
+
+\begin_layout Chapter
+Instalación
+\end_layout
+
+\begin_layout Standard
+En este capítulo se mostrará cómo instalar el proyecto en tu equipo paso
+ a paso y con imágenes que acompañen para mejor entendimiento.
+\end_layout
+
+\begin_layout Standard
+Una vez tengamos el instalador, al abrirno nos aparecerá la ventana de la
+ figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ventana-instalador"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Instalacion TFG/Captura.PNG
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ventana instalador
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ventana-instalador"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+En esta ventana nos mostrará una introducción al instalador.
+ Una vez leído, procederemos clicando en el botón de 
+\begin_inset Quotes fld
+\end_inset
+
+Siguiente >
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Al hacerlo, nos aparecerá una nueva ventana, que tendrá la apariencia que
+ se observa en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ventana-carpeta-de"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Instalacion TFG/Captura2.PNG
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ventana carpeta de instalación
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ventana-carpeta-de"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta ventana tendrás que indicar la carpeta en la que deseas instalar
+ el programa.
+ Por defecto aparecerá la carpeta de 
+\begin_inset Quotes fld
+\end_inset
+
+Archivos de programa
+\begin_inset Quotes frd
+\end_inset
+
+ o 
+\begin_inset Quotes fld
+\end_inset
+
+Program Files
+\begin_inset Quotes frd
+\end_inset
+
+, pero clicando en el botón de la derecha con puntos suspensivos, podrás
+ seleccionar la carpeta que desees.
+\end_layout
+
+\begin_layout Standard
+Además, aparecerá el espacio de disco necesario para la instalación, así
+ como el disponible en el disco perteneciente a la carpeta que hayas seleccionad
+o.
+\end_layout
+
+\begin_layout Standard
+Cuando hayas acabado, vuelves a clicar en 
+\begin_inset Quotes fld
+\end_inset
+
+Siguiente >
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por último, aparecerá otra ventana avisando de que se comenzará a instalar
+ el programa en la ubicación señalada.
+ Esta ventana será como en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ventana-comienzo-de"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Instalacion TFG/Captura3.PNG
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ventana comienzo de instalación
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ventana-comienzo-de"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al pulsar en el botón de 
+\begin_inset Quotes fld
+\end_inset
+
+Empezar
+\begin_inset Quotes frd
+\end_inset
+
+ comenzará la instalación, mostrando una barra del progreso de la misma.
+ 
+\end_layout
+
+\begin_layout Standard
+Al terminar, un mensaje avisará de la finalización de la instalación, y
+ ya podrás cerrar el instalador.
+\end_layout
+
+\begin_layout Standard
+Además de la instalación en la ubicación señalada, se habrá creado un acceso
+ directo en el escritorio, para más comodidad.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Uso del programa
+\end_layout
+
+\begin_layout Standard
+Este capítulo está dedicado a enseñar cómo se usa el programa que acabamos
+ de instalar, indicando las teclas que se usan en el mismo y los conceptos
+ básicos que nos ayudarán a disfrutar debidamente de éste.
+ Al igual que el apartado anterior, se mostrarán imágenes para que la explicació
+n sea más clara.
+\end_layout
+
+\begin_layout Standard
+Nada más abrir el programa, aparecerá un menú principal que tendrá el aspecto
+ que se ve en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Aspecto-del-menú"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Uso de TFG/Captura.PNG
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Aspecto del menú principal
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Aspecto-del-menú"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las distintas elecciones que tenemos en el menú principal son las siguientes:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Comenzar:
+\series default
+ El tutorial comienza desde el principio, sin importar si tenemos partida
+ guardada o no.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Cargar Partida: 
+\series default
+Cargamos la partida, en el caso de que ya hayamos comenzado una anteriormente.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Opciones de pantalla: 
+\series default
+Podemos cambiar el tamaño de la ventana, así como elegir la opción de pantalla
+ completa.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Salir: 
+\series default
+El programa se cerrará.
+\end_layout
+
+\begin_layout Section
+Opciones de pantalla
+\end_layout
+
+\begin_layout Standard
+La pantalla de opciones es la que se ve en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Menú-de-opciones"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Uso de TFG/Captura2.PNG
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Aspecto del menú de opciones de pantalla
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Menú-de-opciones"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aquí podremos cambiar dos opciones:
+\end_layout
+
+\begin_layout Itemize
+La resolución de la ventana, seleccionando entre las opciones disponibles
+ en la parte de la izquierda
+\end_layout
+
+\begin_layout Itemize
+El modo de ventana, pudiendo cambiar entre 
+\begin_inset Quotes fld
+\end_inset
+
+Ventana
+\begin_inset Quotes frd
+\end_inset
+
+ y 
+\begin_inset Quotes fld
+\end_inset
+
+Pantalla completa
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando terminemos de cambiar las opciones, pulsamos el botón 
+\begin_inset Quotes fld
+\end_inset
+
+volver
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Instrucciones en partida
+\end_layout
+
+\begin_layout Standard
+La pantalla cuando estés en partida tendrá la apariencia que se muestra
+ en la 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Pantalla-en-partida"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Uso de TFG/Captura3.PNG
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ejemplo de pantalla cuando la partida se ejecuta
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pantalla-en-partida"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los controles dentro del tutorial son los siguientes:
+\end_layout
+
+\begin_layout Itemize
+Teclas de dirección: mueves al personaje libremente en el plano horizontal
+\end_layout
+
+\begin_layout Itemize
+Espacio: el personaje salta
+\end_layout
+
+\begin_layout Itemize
+Tecla E: interactúas con los botones
+\end_layout
+
+\begin_layout Itemize
+Tecla P: menú de pausa
+\end_layout
+
+\begin_layout Itemize
+Botón derecho del ratón: agarras un objeto
+\end_layout
+
+\begin_layout Chapter
+Desinstalación del programa
+\end_layout
+
+\begin_layout Standard
+En el directorio donde se ha installado el programa, encontrarás un ejecutable
+ llamado 
+\begin_inset Quotes fld
+\end_inset
+
+uninstal.exe
+\begin_inset Quotes frd
+\end_inset
+
+, como se puede ver en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Carpeta-de-instalación"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Instalacion TFG/Captura4.PNG
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Carpeta de instalación
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Carpeta-de-instalación"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al ejecutarlo aparecerá la ventana que aparece en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Desinstalador"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Rafael Moreno/Desktop/Capturas Instalacion TFG/Captura5.PNG
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Desinstalador
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Desinstalador"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una vez pulsemos en el botón 
+\begin_inset Quotes fld
+\end_inset
+
+Aceptar
+\begin_inset Quotes frd
+\end_inset
+
+, el programa se desinstalará completamente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+afterpage{
+\backslash
+blankpage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
