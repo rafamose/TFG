@@ -6,7 +6,6 @@
 \origin unavailable
 \textclass book
 \begin_preamble
-\setlength{\parskip}{1em}
 \usepackage{afterpage}
 
 \newcommand\blankpage{%
@@ -39,7 +38,7 @@
 \bibtex_command default
 \index_command default
 \float_placement H
-\paperfontsize default
+\paperfontsize 12
 \spacing onehalf
 \use_hyperref false
 \papersize default

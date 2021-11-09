@@ -7,6 +7,11 @@
 \textclass book
 \begin_preamble
 \usepackage{afterpage}
+\usepackage{palatino}
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\usepackage{afterpage}
 
 \newcommand\blankpage{%
     \null
