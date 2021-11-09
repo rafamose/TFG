@@ -208,7 +208,7 @@ noprefix "false"
 
 \end_inset
 
-:
+.
 \end_layout
 
 \begin_layout Standard
@@ -281,7 +281,7 @@ noprefix "false"
 
 \end_inset
 
-:
+.
 \end_layout
 
 \begin_layout Standard
@@ -383,7 +383,7 @@ noprefix "false"
 
 \end_inset
 
-:
+.
 \end_layout
 
 \begin_layout Standard
@@ -481,7 +481,7 @@ noprefix "false"
 
 \end_inset
 
-:
+.
 \end_layout
 
 \begin_layout Standard
@@ -582,7 +582,7 @@ noprefix "false"
 
 \end_inset
 
-:
+.
 \end_layout
 
 \begin_layout Standard
@@ -673,9 +673,9 @@ Instrucciones en partida
 
 \begin_layout Standard
 La pantalla cuando estés en partida tendrá la apariencia que se muestra
- en la 
+ en la figura 
 \begin_inset CommandInset ref
-LatexCommand formatted
+LatexCommand ref
 reference "fig:Pantalla-en-partida"
 plural "false"
 caps "false"
@@ -683,7 +683,7 @@ noprefix "false"
 
 \end_inset
 
-:
+.
 \end_layout
 
 \begin_layout Standard
@@ -830,7 +830,7 @@ noprefix "false"
 
 \end_inset
 
-:
+.
 \end_layout
 
 \begin_layout Standard

@@ -11,6 +11,15 @@
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
 \usepackage{afterpage}
+\AtBeginDocument{%
+\renewcommand{\listtablename}{Índice de tablas}
+}
+
+\AtBeginDocument{%
+\renewcommand{\tablename}{Tabla}
+}
+
+\usepackage[block=ragged]{biblatex}
 
 \newcommand\blankpage{%
     \null
@@ -49,12 +58,11 @@
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
 \pdf_bookmarksopenlevel 1
-\pdf_breaklinks false
+\pdf_breaklinks true
 \pdf_pdfborder true
 \pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle true
-\pdf_quoted_options "breaklinks=true"
 \papersize default
 \use_geometry false
 \use_package amsmath 1
@@ -69,7 +77,7 @@
 \use_package undertilde 1
 \cite_engine biblatex
 \cite_engine_type numerical
-\biblio_style jurabib
+\biblio_style plainnat
 \biblatex_bibstyle numeric
 \biblatex_citestyle numeric
 \use_bibtopic false
@@ -245,9 +253,16 @@ Los videojuegos están presentes en la vida cotidiana como forma recurrente
 El proceso de creación de un videojuego es complejo y conlleva muchos elementos.
  No consiste solo en diseñar los niveles, también hay que crear los personajes,
  la música… Para un proyecto de este tipo se requiere la colaboración de
- expertos de múltiples ámbitos: artistas, músicos, matemáticos… Por supuesto,
- el proceso implica múltiples aspectos de programación, similares a los
- que se abordan en el Grado de Ingeniería en Informática.
+ expertos de múltiples ámbitos: artistas, músicos, matemáticos… 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Musica,Matematicas"
+literal "false"
+
+\end_inset
+
+ Por supuesto, el proceso implica múltiples aspectos de programación, similares
+ a los que se abordan en el Grado de Ingeniería en Informática.
  Este aspecto de programación es muchas veces minusvalorado por los usuarios,
  que solo observan el resultado final.
  En este sentido, programar un videojuego puede ser complejo o tosco, pero
@@ -261,12 +276,37 @@ Este proyecto está orientado a enseñar de forma amigable algunos conceptos
  de programación de videojuegos, sirviendo de iniciación para los usuarios.
  Para realizar esta tarea parece que lo más idóneo es crear un videojuego
  utilizando alguna de las diferentes plataformas de desarrollo que hay disponibl
-es.
+es 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "EntornosVideojuegos"
+literal "false"
+
+\end_inset
+
+.
  En nuestro caso, hemos elegido Unreal Engine, porque es uno de los motores
  más utilizados y potentes de los disponibles en la actualidad.
  Además, todos los meses proporciona recursos de forma gratuita y de libre
  uso: interfaces, modelos, música…; y todo ello facilitará toda la parte
  de diseño y se podrá hacer más énfasis en la programación.
+\end_layout
+
+\begin_layout Standard
+El tutorial consistirá en una serie de niveles, y cada uno de ellos te explicará
+ una serie de conceptos.
+ Una vez explicados todos esos conceptos, se pasará a una segunda zona donde
+ se pondrán a prueba los conceptos recién aprendidos, ya sea mediante test
+ o una muestra visual.
+\end_layout
+
+\begin_layout Standard
+Este tutorial está enfocado a usuarios con, al menos, un nivel medio de
+ programación, ya que se tratarán conceptos avanzados y los más básicos
+ se darán por aprendidos.
+ Aun así, no quiere decir que vaya a ser un tutorial difícil de realizar.
+ Los tests serán sencillos y bastará con entender los conceptos específicos
+ explicados en el propio tutorial.
 \end_layout
 
 \begin_layout Chapter
@@ -284,10 +324,26 @@ Identificación del problema real
 
 \begin_layout Standard
 Unreal Engine posee múltiples escenarios de pruebas pre-construidos en los
- cuales puedes interactuar con diversos elementos del motor gráfico <referencia>
- y aprender de manera general cómo funcionan los mismos.
+ cuales puedes interactuar con diversos elementos del motor gráfico y aprender
+ de manera general cómo funcionan los mismos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Templates"
+literal "false"
+
+\end_inset
+
+.
  A su vez, existen incontables cursos y tutoriales de programación y uso
- de Unreal Engine.<referencia>
+ de Unreal Engine 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CourseUnreal,LightingCourse"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -629,8 +685,7 @@ Origen de los videojuegos
 \begin_layout Standard
 La considerada primera “máquina de juegos” es “NIMATRON” 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-before "[2]"
+LatexCommand cite
 key "HistoryOf"
 literal "false"
 
@@ -641,8 +696,7 @@ literal "false"
  Edward Uhler Condon.
  Jugaron unas 50.000 personas en los 6 meses que estuvo exponiéndose 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-before "[3]"
+LatexCommand cite
 key "NIMATRON"
 literal "false"
 
@@ -674,8 +728,7 @@ Los primeros videojuegos 3D en primera persona fueron “Maze War”, diseñado
  El género no adquirió popularidad hasta “Wolfenstein 3D” (1992), y un año
  más tarde “Doom”, ambos creados por id Software y lanzados para PC 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-before "[1]"
+LatexCommand cite
 key "FirstP"
 literal "false"
 
@@ -712,7 +765,7 @@ No fue hasta la década de los noventa cuando se comenzó a hablar del término
  “game engine”
 \begin_inset CommandInset citation
 LatexCommand citeauthor
-before "[4]"
+before "[1]"
 key "MotoresPri"
 literal "false"
 
@@ -727,8 +780,7 @@ literal "false"
  Dante 98” en 1992, el cual sigue siendo actualizado a día de hoy bajo el
  nombre de “RPG Maker”
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-before "[5]"
+LatexCommand cite
 key "RPGMAKER"
 literal "false"
 
@@ -751,9 +803,8 @@ En 1998, el estudio de videojuegos “Epic MegaGames” (actual “Epic Games”
 Esa versión fue denominada como “Unreal Engine 1”, y entre sus características
  estaba la detección de colisión o el editor de niveles
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-before "[6]"
-key "ThisUnreal"
+LatexCommand cite
+key "ThisUnreal,UnrealHistoria"
 literal "false"
 
 \end_inset
@@ -805,8 +856,7 @@ Unreal Engine
 El motor que se va a usar se define a sí mismo como la plataforma más abierta
  y completa de creación de proyectos en 3D a tiempo real
 \begin_inset CommandInset citation
-LatexCommand citeauthor
-before "[7]"
+LatexCommand cite
 key "UnrealEngine"
 literal "false"
 
@@ -840,13 +890,29 @@ Con respecto a la renderización, es un proceso que se realiza en segundo
 \end_layout
 
 \begin_layout Standard
-En Unreal Engine se divide en tres tipos: block, overlap e ignore.
+En Unreal Engine se divide en tres tipos: 
+\shape italic
+block
+\shape default
+, 
+\shape italic
+overlap
+\shape default
+ e 
+\shape italic
+ignore
+\shape default
+.
  El primero de ellos no permite al objeto A traspasar el objeto B, mientras
  los otros dos sí.
  La diferencia entre overlap e ignore es que cuando el objeto A realiza
  un overlap sobre el objeto B, permite realizar la acción que se programe.
  Unreal Engine tiene dos modos de programación.
- La programación por código con Visual Studio, y los llamados blueprints.
+ La programación por código con Visual Studio, y los llamados 
+\shape italic
+blueprints
+\shape default
+.
  Son modos totalmente integrados entre sí, siendo el uso de ambos la manera
  más recomendada de realizar un proyecto.
  Con los blueprints te permite conectar o modificar de manera más intuitiva
@@ -855,9 +921,12 @@ En Unreal Engine se divide en tres tipos: block, overlap e ignore.
 \end_layout
 
 \begin_layout Standard
-Desde 2014, Unreal Engine tiene una tienda íntegra o “marketplace” para
- adquirir recursos de pago hechos por la comunidad, empresas externas o
- la propia Epic Games.
+Desde 2014, Unreal Engine tiene una tienda íntegra o 
+\shape italic
+marketplace
+\shape default
+ para adquirir recursos de pago hechos por la comunidad, empresas externas
+ o la propia Epic Games.
  Cada mes ofrecen los llamados “Free of the Month”, recursos que anteriormente
  eran de pago y los ofrecen temporalmente sin ningún coste adicional.
  Entre estos recursos podemos encontrar: música, interfaces, modelos de
@@ -926,8 +995,16 @@ Dreams
 
 \begin_layout Standard
 Si hablamos de tutoriales interactivos sobre desarrollo de videojuegos,
- un ejemplo muy reciente es “Dreams”, un videojuego lanzado recientemente
- por Media Molecule y publicado por Sony para PlayStation 4.
+ un ejemplo muy reciente es “Dreams” 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Dreams"
+literal "false"
+
+\end_inset
+
+, un videojuego lanzado recientemente por Media Molecule y publicado por
+ Sony para PlayStation 4.
  Se trata de un entorno de creación de juegos: da las herramientas necesarias
  para poder crear tus propias mecánicas, niveles, música, etc.
  Usa muchos conceptos de programación de manera sencilla e interactiva para

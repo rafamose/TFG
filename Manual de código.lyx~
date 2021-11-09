@@ -44,8 +44,8 @@
 \bibtex_command default
 \index_command default
 \float_placement H
-\paperfontsize default
-\spacing single
+\paperfontsize 12
+\spacing onehalf
 \use_hyperref false
 \papersize default
 \use_geometry false

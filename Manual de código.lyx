@@ -141,13 +141,23 @@ En este documento se mostrará todo el código diseñado y realizado para el
 El código principal está realizado en el lenguaje C++, y tiene las característic
 as y funciones propias del motor gráfico Unreal Engine, ya que en todo momento
  se codifica en base a éste.
- Así mismo, se mostrará los Blueprints creados, al ser un lenguaje de script
+ Así mismo, se mostrarán los 
+\shape italic
+Blueprints
+\shape default
+ creados, al ser un lenguaje de 
+\shape italic
+script
+\shape default
  como tal, y se tratará de la misma manera.
 \end_layout
 
 \begin_layout Standard
-Así, este documento se divide en las funciones creadas con C++ y con Blueprints,
- siendo a su vez separadas por clases y/o documentos.
+Así, este documento se divide en las funciones creadas con C++ y con 
+\shape italic
+Blueprints
+\shape default
+, siendo a su vez separadas por clases y/o documentos.
 \end_layout
 
 \begin_layout Section
@@ -156,7 +166,11 @@ Ficheros
 
 \begin_layout Standard
 La programación de este proyecto se divide en los ficheros de programación
- en C++ y en los blueprints, que son ficheros .uasset.
+ en C++ y en los 
+\shape italic
+blueprints
+\shape default
+, que son ficheros .uasset.
 \end_layout
 
 \begin_layout Subsection
@@ -238,11 +252,17 @@ Watcher.cpp
 
 \end_deeper
 \begin_layout Subsection
-Ficheros blueprint
+Ficheros 
+\shape italic
+blueprint
 \end_layout
 
 \begin_layout Standard
-Los ficheros blueprint del proyecto son los siguientes:
+Los ficheros 
+\shape italic
+blueprints
+\shape default
+ del proyecto son los siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -321,7 +341,7 @@ Código C++
 \end_layout
 
 \begin_layout Standard
-A continuación mostrará cada una de las clases codificadas en lenguaje C++:
+A continuación mostrará cada una de las clases codificadas en lenguaje C++.
 \end_layout
 
 \begin_layout Section
@@ -584,8 +604,9 @@ Clase MyBlueprintFunctionLibrary
 \end_layout
 
 \begin_layout Standard
-Esta clase es la usada para crear en C++ nuevos nodos para usar en tus Blueprint
-s
+Esta clase es la usada para crear en C++ nuevos nodos para usar en tus 
+\shape italic
+Blueprints.
 \end_layout
 
 \begin_layout Subsection
@@ -2032,8 +2053,11 @@ Blueprints
 \end_layout
 
 \begin_layout Standard
-En este capitulo se mostrará cada uno de los blueprints programados para
- el proyecto.
+En este capitulo se mostrará cada uno de los 
+\shape italic
+blueprints
+\shape default
+ programados para el proyecto.
  Cada uno se dividirá en módulos lo suficientemente individuales para poder
  ser explicados por separado, ya que el tamaño de éstos es tan grande que
  no es posible mostrarlo todo a la vez.
@@ -2044,12 +2068,24 @@ Blueprint MyGameInstance
 \end_layout
 
 \begin_layout Standard
-Este blueprint es lo que se le llama la instancia del juego.
+Este 
+\shape italic
+blueprint
+\shape default
+ es lo que se le llama la instancia del juego.
  Aquí se almacenan las variables globales, así como las funciones globales.
 \end_layout
 
 \begin_layout Subsection
 Variables
+\end_layout
+
+\begin_layout Standard
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -2103,7 +2139,7 @@ noprefix "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -2220,8 +2256,12 @@ Blueprint MyHUD
 \end_layout
 
 \begin_layout Standard
-Este es el blueprint correspondiente al HUD, es decir, la información que
- aparece en pantalla en todo momento.
+Este es el 
+\shape italic
+blueprint
+\shape default
+ correspondiente al HUD, es decir, la información que aparece en pantalla
+ en todo momento.
  En nuestro caso es únicamente una retícula, así que se ha realizado lo
  que se muestra en la figura 
 \begin_inset CommandInset ref
@@ -2281,8 +2321,12 @@ Blueprint Abrirpuerta
 \end_layout
 
 \begin_layout Standard
-Este blueprint se usa para abrir una puerta una vez se hayan leído todas
- las explicaciones de la sala.
+Este 
+\shape italic
+blueprint
+\shape default
+ se usa para abrir una puerta una vez se hayan leído todas las explicaciones
+ de la sala.
 \end_layout
 
 \begin_layout Subsection
@@ -2290,7 +2334,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -2372,8 +2420,11 @@ Blueprint GuardarPartida
 \end_layout
 
 \begin_layout Standard
-Este blueprint se usa para guardar partida cuando el jugador pasa por una
- zona de autoguardado.
+Este 
+\shape italic
+blueprint
+\shape default
+ se usa para guardar partida cuando el jugador pasa por una zona de autoguardado.
 \end_layout
 
 \begin_layout Subsection
@@ -2381,7 +2432,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -2457,7 +2512,11 @@ Blueprint Level3finished
 \end_layout
 
 \begin_layout Standard
-Este blueprint indica si se ha terminado el test del nivel 3.
+Este 
+\shape italic
+blueprint
+\shape default
+ indica si se ha terminado el test del nivel 3.
 \end_layout
 
 \begin_layout Subsection
@@ -2465,7 +2524,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -2523,8 +2586,12 @@ Blueprint ChangeLevel
 \end_layout
 
 \begin_layout Standard
-Este blueprint sirve para cambiar de nivel a través de un portal si se cumplen
- las condiciones necesarias.
+Este 
+\shape italic
+blueprint
+\shape default
+ sirve para cambiar de nivel a través de un portal si se cumplen las condiciones
+ necesarias.
 \end_layout
 
 \begin_layout Subsection
@@ -2532,7 +2599,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -2652,8 +2723,16 @@ Blueprint ActorVariableLevel0
 \end_layout
 
 \begin_layout Standard
-Este blueprint sirve para guardar las variables de nivel a la que accederán
- el resto de blueprints.
+Este 
+\shape italic
+blueprint
+\shape default
+ sirve para guardar las variables de nivel a la que accederán el resto de
+ 
+\shape italic
+blueprints
+\shape default
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2661,7 +2740,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -2718,8 +2801,12 @@ Blueprint ChangeImages
 \end_layout
 
 \begin_layout Standard
-Este blueprint se usa para cambiar las imágenes de las distintas opciones
- del test del nivel 3.
+Este 
+\shape italic
+blueprint
+\shape default
+ se usa para cambiar las imágenes de las distintas opciones del test del
+ nivel 3.
  Son tres opciones y cambia las imágenes en cada fase del test.
 \end_layout
 
@@ -2728,7 +2815,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -2872,7 +2963,11 @@ Blueprint FirstPersonCharacter
 \end_layout
 
 \begin_layout Standard
-Este es el blueprint correspondiente al personaje que controla el usuario.
+Este es el 
+\shape italic
+blueprint
+\shape default
+ correspondiente al personaje que controla el usuario.
 \end_layout
 
 \begin_layout Subsection
@@ -2880,7 +2975,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -3255,7 +3354,11 @@ Blueprint Button
 \end_layout
 
 \begin_layout Standard
-Este es el blueprint de todos los botones explicativos.
+Este es el 
+\shape italic
+blueprint
+\shape default
+ de todos los botones explicativos.
  Al interactuar con él aparecerá en pantalla un diálogo con una explicación
  de un concepto de Unreal Engine.
 \end_layout
@@ -3265,7 +3368,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -3532,7 +3639,11 @@ Blueprint ButtonTrigger
 \end_layout
 
 \begin_layout Standard
-Este es el blueprint de todos los botones explicativos.
+Este es el 
+\shape italic
+blueprint
+\shape default
+ de todos los botones explicativos.
  Al interactuar con él aparecerá en pantalla un diálogo con una explicación
  de un concepto de Unreal Engine.
 \end_layout
@@ -3542,7 +3653,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -3776,8 +3891,12 @@ Blueprint ButtonTest1
 \end_layout
 
 \begin_layout Standard
-Este blueprint se usa para el actor responsable de mostrar el test perteneciente
- al nivel 2.
+Este 
+\shape italic
+blueprint
+\shape default
+ se usa para el actor responsable de mostrar el test perteneciente al nivel
+ 2.
  Se encarga tanto de mostrar el diálogo en pantalla, como de realizar las
  acciones y cálculos necesarios para que el test funcione correctamente.
 \end_layout
@@ -3787,7 +3906,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -4656,7 +4779,11 @@ Blueprint ButtonTest2
 \end_layout
 
 \begin_layout Standard
-Este es el blueprint relativo al segundo test, perteneciente al nivel 3.
+Este es el 
+\shape italic
+blueprint
+\shape default
+ relativo al segundo test, perteneciente al nivel 3.
 \end_layout
 
 \begin_layout Subsection
@@ -4664,7 +4791,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -4927,8 +5058,11 @@ Blueprint BotonesTest1
 \end_layout
 
 \begin_layout Standard
-Este blueprint corresponde al primero de los botones de opciones del test
- del nivel 3.
+Este 
+\shape italic
+blueprint
+\shape default
+ corresponde al primero de los botones de opciones del test del nivel 3.
 \end_layout
 
 \begin_layout Subsection
@@ -4936,7 +5070,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -5196,8 +5334,11 @@ Blueprint BotonesTest1
 \end_layout
 
 \begin_layout Standard
-Este blueprint corresponde al segundo de los botones de opciones del test
- del nivel 3.
+Este 
+\shape italic
+blueprint
+\shape default
+ corresponde al segundo de los botones de opciones del test del nivel 3.
 \end_layout
 
 \begin_layout Subsection
@@ -5205,7 +5346,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
@@ -5464,8 +5609,11 @@ Blueprint BotonesTest1
 \end_layout
 
 \begin_layout Standard
-Este blueprint corresponde al tercero de los botones de opciones del test
- del nivel 3.
+Este 
+\shape italic
+blueprint
+\shape default
+ corresponde al tercero de los botones de opciones del test del nivel 3.
 \end_layout
 
 \begin_layout Subsection
@@ -5473,7 +5621,11 @@ Variables
 \end_layout
 
 \begin_layout Standard
-Las variables correspondientes a este blueprint son las siguientes:
+Las variables correspondientes a este 
+\shape italic
+blueprint
+\shape default
+ son las siguientes:
 \end_layout
 
 \begin_layout Itemize
