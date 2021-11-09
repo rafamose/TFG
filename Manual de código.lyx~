@@ -12,6 +12,13 @@
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -87,6 +94,33 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+afterpage{
+\backslash
+blankpage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset FloatList figure
 
 \end_inset
@@ -118,6 +152,161 @@ Así, este documento se divide en las funciones creadas con C++ y con Blueprints
 
 \begin_layout Section
 Ficheros
+\end_layout
+
+\begin_layout Standard
+La programación de este proyecto se divide en los ficheros de programación
+ en C++ y en los blueprints, que son ficheros .uasset.
+\end_layout
+
+\begin_layout Subsection
+Ficheros C++
+\end_layout
+
+\begin_layout Standard
+Los ficheros programados en C++ del proyecto son:
+\end_layout
+
+\begin_layout Itemize
+AbrirPuerta
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+AbrirPuerta.h
+\end_layout
+
+\begin_layout Itemize
+AbrirPuerta.cpp
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+MyBlueprintFunctionLibrary
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+MyBlueprintFunctionLibrary.h
+\end_layout
+
+\begin_layout Itemize
+MyBlueprintFunctionLibrary.cpp
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Grabber
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Grabber.h
+\end_layout
+
+\begin_layout Itemize
+Grabber.cpp
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+ReporteDePosicion
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+ReporteDePosicion.h
+\end_layout
+
+\begin_layout Itemize
+ReporteDePosicion.cpp
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Watcher
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Watcher.h
+\end_layout
+
+\begin_layout Itemize
+Watcher.cpp
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Ficheros blueprint
+\end_layout
+
+\begin_layout Standard
+Los ficheros blueprint del proyecto son los siguientes:
+\end_layout
+
+\begin_layout Itemize
+MyGameInstance.uasset
+\end_layout
+
+\begin_layout Itemize
+MyHUD.uasset
+\end_layout
+
+\begin_layout Itemize
+AbrirPuerta.uasset
+\end_layout
+
+\begin_layout Itemize
+GuardarPartida.uasset
+\end_layout
+
+\begin_layout Itemize
+Level3finished.uasset
+\end_layout
+
+\begin_layout Itemize
+ChangeLevel.uasset
+\end_layout
+
+\begin_layout Itemize
+ActorVariableLevel0.uasset
+\end_layout
+
+\begin_layout Itemize
+ChangeImages.uasset
+\end_layout
+
+\begin_layout Itemize
+FirstPersonCharacter.uasset
+\end_layout
+
+\begin_layout Itemize
+Button.uasset
+\end_layout
+
+\begin_layout Itemize
+ButtonTrigger.uasset
+\end_layout
+
+\begin_layout Itemize
+ButtonTest1.uasset
+\end_layout
+
+\begin_layout Itemize
+ButtonTest2.uasset
+\end_layout
+
+\begin_layout Itemize
+BotonesTest1.uasset
+\end_layout
+
+\begin_layout Itemize
+BotonesTest2.uasset
+\end_layout
+
+\begin_layout Itemize
+BotonesTest3.uasset
 \end_layout
 
 \begin_layout Standard
